@@ -1,0 +1,13 @@
+provider: southendonsea
+apis_io: https://apis.io/providers/southendonsea/
+context: weather
+generated: '2026-11-10'
+concepts:
+  historical_weather:
+    path_segment:
+    - history
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/southendonsea-now-api-openapi.yml#GET /api/southend-now/history
+    - openapi/_original/southendonsea-openapi.json#GET /api/southend-now/history

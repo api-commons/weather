@@ -1,0 +1,43 @@
+provider: dynamicfeed-ai
+apis_io: https://apis.io/providers/dynamicfeed-ai/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/openweather/current
+  forecast:
+    path_segment:
+    - forecast
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/dynamicfeed-ai-openapi.json#GET /forecast
+    - openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/openweather/forecast
+  historical_weather:
+    path_segment:
+    - history
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/dynamicfeed-ai-openapi.json#GET /benchmarks/history
+    - openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/benchmark/history
+    - openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/history
+  air_quality:
+    path_segment:
+    - air-quality
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/dynamicfeed-ai-openapi.json#GET /air-quality
+  station:
+    path_segment:
+    - station
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/station/{station_id}

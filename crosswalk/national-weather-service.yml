@@ -1,0 +1,83 @@
+provider: national-weather-service
+apis_io: https://apis.io/providers/national-weather-service/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - latest
+    properties:
+      condition: icon
+      id:
+      - id
+      - '@id'
+      - stationId
+      temperature: temperature
+      time: timestamp
+      feels_like:
+      - windChill
+      - heatIndex
+      humidity: relativeHumidity
+      station: station
+      wind_speed: windSpeed
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/national-weather-service-openapi.json#GET /stations/{stationId}/observations/latest
+    - openapi/_original/noaa-nws-openapi.yml#GET /stations/{stationId}/observations/latest
+    - openapi/_original/weather-gov-api-openapi.json#GET /stations/{stationId}/observations/latest
+    - openapi/_original/openapi.yml#GET /stations/{stationId}/observations/latest
+  forecast:
+    path_segment:
+    - forecast
+    - hourly
+    properties:
+      units: units
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/national-weather-service-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast
+    - openapi/_original/national-weather-service-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast/hourly
+    - openapi/_original/national-weather-service-openapi.json#GET /zones/{type}/{zoneId}/forecast
+    - openapi/_original/noaa-nws-openapi.yml#GET /gridpoints/{wfo}/{x},{y}/forecast
+    - openapi/_original/noaa-nws-openapi.yml#GET /gridpoints/{wfo}/{x},{y}/forecast/hourly
+  historical_weather:
+    path_segment:
+    - observations
+    properties:
+      time: timestamp
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/national-weather-service-openapi.json#GET /stations/{stationId}/observations
+    - openapi/_original/national-weather-service-openapi.json#GET /stations/{stationId}/observations/{time}
+    - openapi/_original/noaa-nws-openapi.yml#GET /stations/{stationId}/observations
+    - openapi/_original/noaa-nws-openapi.yml#GET /stations/{stationId}/observations/{time}
+    - openapi/_original/weather-gov-api-openapi.json#GET /stations/{stationId}/observations
+  weather_alert:
+    path_segment:
+    - alerts
+    properties:
+      geometry: geometry
+      id: id
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/national-weather-service-openapi.json#GET /alerts
+    - openapi/_original/national-weather-service-openapi.json#GET /alerts/{id}
+    - openapi/_original/noaa-nws-openapi.yml#GET /alerts
+    - openapi/_original/noaa-nws-openapi.yml#GET /alerts/{id}
+    - openapi/_original/weather-gov-api-openapi.json#GET /alerts
+  station:
+    path_segment:
+    - stations
+    properties:
+      name: name
+      id:
+      - id
+      - '@id'
+      elevation: elevation
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/national-weather-service-openapi.json#GET /gridpoints/{wfo}/{x},{y}/stations
+    - openapi/_original/national-weather-service-openapi.json#GET /points/{latitude},{longitude}/stations
+    - openapi/_original/national-weather-service-openapi.json#GET /radar/stations
+    - openapi/_original/national-weather-service-openapi.json#GET /radar/stations/{stationId}
+    - openapi/_original/national-weather-service-openapi.json#GET /stations

@@ -1,0 +1,24 @@
+provider: leaf-agriculture
+apis_io: https://apis.io/providers/leaf-agriculture/
+context: weather
+generated: '2026-11-10'
+concepts:
+  forecast:
+    path_segment:
+    - daily
+    - hourly
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/users/{leafUserId}/weather/historical/field/{fieldId}/daily
+    - openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/users/{leafUserId}/weather/historical/field/{fieldId}/hourly
+    - openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/weather/forecast/daily/{lat},{lon}
+    - openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/weather/forecast/hourly/{lat},{lon}
+    - openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/weather/historical/daily/{lat},{lon}
+  historical_weather:
+    path_segment:
+    - historical
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/leaf-agriculture-openapi.yml#GET /services/beta/api/products/matching/operations/{operationId}/matches/{matchId}/historical

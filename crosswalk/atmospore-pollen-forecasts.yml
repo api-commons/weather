@@ -1,0 +1,13 @@
+provider: atmospore-pollen-forecasts
+apis_io: https://apis.io/providers/atmospore-pollen-forecasts/
+context: weather
+generated: '2026-11-10'
+concepts:
+  air_quality:
+    path_segment:
+    - pollen
+    properties:
+      time: date
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/atmospore-pollen-forecasts-openapi-original.json#GET /v1/pollen

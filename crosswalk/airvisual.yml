@@ -1,0 +1,15 @@
+provider: airvisual
+apis_io: https://apis.io/providers/airvisual/
+context: weather
+generated: '2026-11-10'
+concepts:
+  station:
+    path_segment:
+    - stations
+    - station
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/openapi.json#GET /station
+    - openapi/_original/openapi.json#GET /stations

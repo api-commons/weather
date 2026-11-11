@@ -1,0 +1,40 @@
+provider: apifreaks-api-hub-for-developers
+apis_io: https://apis.io/providers/apifreaks-api-hub-for-developers/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/apifreaks-api-hub-for-developers-bulk-live-weather-openapi.json#POST /current
+    - openapi/_original/apifreaks-api-hub-for-developers-live-weather-openapi.json#GET /current
+  forecast:
+    path_segment:
+    - forecast
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/apifreaks-api-hub-for-developers-weather-forecast-openapi.json#GET /forecast
+  historical_weather:
+    path_segment:
+    - historical
+    - history
+    properties:
+      time: date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/apifreaks-api-hub-for-developers-dns-history-lookup-openapi.json#GET /domain/dns/history
+    - openapi/_original/apifreaks-api-hub-for-developers-domain-whois-history-lookup-openapi.json#GET /domain/whois/history
+    - openapi/_original/apifreaks-api-hub-for-developers-historical-commodity-prices-openapi.json#GET /commodity/rates/historical
+    - openapi/_original/apifreaks-api-hub-for-developers-historical-currency-rate-openapi.json#GET /currency/rates/historical
+    - openapi/_original/apifreaks-api-hub-for-developers-historical-weather-openapi.json#GET /historical
+  air_quality:
+    path_segment:
+    - air-quality
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/apifreaks-api-hub-for-developers-air-quality-openapi.json#GET /air-quality

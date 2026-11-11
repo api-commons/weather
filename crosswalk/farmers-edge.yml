@@ -1,0 +1,12 @@
+provider: farmers-edge
+apis_io: https://apis.io/providers/farmers-edge/
+context: weather
+generated: '2026-11-10'
+concepts:
+  weather_alert:
+    path_segment:
+    - alerts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/farmers-edge-farmcommand-openapi-original.json#POST /integrations/leaf/alerts/

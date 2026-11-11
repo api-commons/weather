@@ -1,0 +1,20 @@
+provider: open-meteo
+apis_io: https://apis.io/providers/open-meteo/
+context: weather
+generated: '2026-11-10'
+concepts:
+  forecast:
+    path_segment:
+    - forecast
+    properties:
+      current: current
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/open-meteo-forecast-openapi.yml#GET /v1/forecast
+  air_quality:
+    path_segment:
+    - air-quality
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/open-meteo-air-quality-openapi.yml#GET /v1/air-quality

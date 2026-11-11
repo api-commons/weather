@@ -1,0 +1,60 @@
+aid: common-weather
+name: Weather
+type: Common
+description: 'The common Weather vocabulary, distilled from the harvested OpenAPI of 54 providers in APIs.io: shared
+  operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each provider''s
+  own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Weather
+- Meteorology
+- Weather Data
+- Weather API
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/weather/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-weather:weather
+  name: Common Weather Interface
+  description: The Weather interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/weather
+  tags:
+  - Weather
+  - Meteorology
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/weather/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/weather/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/weather/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: current_conditions
+    url: https://raw.githubusercontent.com/api-commons/weather/main/schema/current_conditions.json
+  - type: JSONSchema
+    name: forecast
+    url: https://raw.githubusercontent.com/api-commons/weather/main/schema/forecast.json
+  - type: JSONSchema
+    name: historical_weather
+    url: https://raw.githubusercontent.com/api-commons/weather/main/schema/historical_weather.json
+  - type: JSONSchema
+    name: weather_alert
+    url: https://raw.githubusercontent.com/api-commons/weather/main/schema/weather_alert.json
+  - type: JSONSchema
+    name: air_quality
+    url: https://raw.githubusercontent.com/api-commons/weather/main/schema/air_quality.json
+  - type: JSONSchema
+    name: station
+    url: https://raw.githubusercontent.com/api-commons/weather/main/schema/station.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/weather/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

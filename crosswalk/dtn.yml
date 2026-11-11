@@ -1,0 +1,45 @@
+provider: dtn
+apis_io: https://apis.io/providers/dtn/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dtn-weather-conditions-openapi.yml#GET /v2/current
+  forecast:
+    path_segment:
+    - forecast
+    - forecasts
+    - hourly
+    - daily
+    properties:
+      units: units
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dtn-radarscope-radar-products-openapi.json#GET /feeds/v3/tropical_cyclone/forecasts
+    - openapi/_original/dtn-renewables-api-openapi.json#GET /v1/hub-height-winds/forecast
+    - openapi/_original/dtn-renewables-api-openapi.json#GET /v1/solar-irradiance/forecast
+    - openapi/_original/dtn-weather-conditions-openapi.yml#GET /forecast/daily
+    - openapi/_original/dtn-weather-conditions-openapi.yml#GET /forecast/hourly
+  weather_alert:
+    path_segment:
+    - alerts
+    properties:
+      geometry: geometry
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dtn-alerting-api-openapi.json#GET /v2/alerts
+  station:
+    path_segment:
+    - stations
+    properties:
+      elevation: elevation
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dtn-observation-api-openapi.json#GET /v2/observations/stations
+    - openapi/_original/dtn-weather-conditions-openapi.yml#GET /stations

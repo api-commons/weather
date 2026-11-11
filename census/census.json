@@ -1,0 +1,3425 @@
+{
+ "cohort_size": 54,
+ "unreadable": [],
+ "concepts": {
+  "current_conditions": {
+   "2s-io": {
+    "segments": [
+     "now",
+     "current"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "query": "object",
+     "summary": "object",
+     "earthquakes": "array",
+     "wildfires": "array",
+     "station": "object",
+     "predictions": "array",
+     "lat": "number",
+     "lon": "number",
+     "time": "string",
+     "isDay": "boolean",
+     "weatherCode": "number",
+     "conditions": "string",
+     "temperature": "number",
+     "apparentTemperature": "number",
+     "humidityPct": "number",
+     "precipitation": "number",
+     "rain": "number",
+     "snowfallCm": "number",
+     "cloudCoverPct": "number",
+     "pressureMslHpa": "number",
+     "windSpeed": "number",
+     "windDirectionDeg": "number",
+     "windGusts": "number"
+    },
+    "evidence": [
+     "openapi/_original/2s-io-openapi.json#GET /api/earth/now",
+     "openapi/_original/2s-io-openapi.json#GET /api/tides/now",
+     "openapi/_original/2s-io-openapi.json#GET /api/weather/current"
+    ]
+   },
+   "accuweather": {
+    "segments": [
+     "current",
+     "current-conditions"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "key": "string",
+     "name": "string",
+     "longName": "string",
+     "displayName": "string",
+     "displayTemperature": "string",
+     "displayHighTemperature": "string",
+     "displayLowTemperature": "string",
+     "displayRealFeel": "string",
+     "displayRealFeelShade": "string",
+     "icon": "integer",
+     "conditions": "string",
+     "localTime": "string",
+     "color": "string",
+     "isBefore7PM": "boolean",
+     "isDayTime": "boolean",
+     "minuteCastForecast": "object",
+     "numberOfAlerts": "integer",
+     "latitude": "number",
+     "longitude": "number",
+     "extended": "object",
+     "iconCode": "integer",
+     "now": "string",
+     "phrase": "string",
+     "realFeel": "string",
+     "realFeelShade": "string",
+     "temperature": "string",
+     "temperatureValue": "number",
+     "realFeelValue": "number",
+     "realFeelShadeValue": "number",
+     "realFeelPhrase": "string",
+     "realFeelShadePhrase": "string",
+     "apparentTempImperial": "number",
+     "windSpeedImperial": "number"
+    },
+    "evidence": [
+     "openapi/_original/accuweather-openapi-original.yml#GET /api/current-conditions/{locationKey}",
+     "openapi/_original/accuweather-openapi-original.yml#GET /api/current/{locationKey}"
+    ]
+   },
+   "apifreaks-api-hub-for-developers": {
+    "segments": [
+     "current"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "bulk": "array",
+     "location": "string",
+     "lat": "number",
+     "long": "number",
+     "ip": "string",
+     "current": "object"
+    },
+    "evidence": [
+     "openapi/_original/apifreaks-api-hub-for-developers-bulk-live-weather-openapi.json#POST /current",
+     "openapi/_original/apifreaks-api-hub-for-developers-live-weather-openapi.json#GET /current"
+    ]
+   },
+   "dtn": {
+    "segments": [
+     "current"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "generatedAt": "string",
+     "units": "string",
+     "location": "object",
+     "observations": "object"
+    },
+    "evidence": [
+     "openapi/_original/dtn-weather-conditions-openapi.yml#GET /v2/current"
+    ]
+   },
+   "dynamicfeed-ai": {
+    "segments": [
+     "current"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/openweather/current"
+    ]
+   },
+   "national-weather-service": {
+    "segments": [
+     "latest"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "station": "string",
+     "stationId": "string",
+     "stationName": "string",
+     "timestamp": "string",
+     "rawMessage": "string",
+     "textDescription": "string",
+     "icon": [
+      "string",
+      "null"
+     ],
+     "presentWeather": "array",
+     "temperature": "object",
+     "dewpoint": "object",
+     "windDirection": "object",
+     "windSpeed": "object",
+     "windGust": "object",
+     "barometricPressure": "object",
+     "seaLevelPressure": "object",
+     "visibility": "object",
+     "maxTemperatureLast24Hours": "object",
+     "minTemperatureLast24Hours": "object",
+     "precipitationLastHour": "object",
+     "precipitationLast3Hours": "object",
+     "precipitationLast6Hours": "object",
+     "relativeHumidity": "object",
+     "windChill": "object",
+     "heatIndex": "object",
+     "cloudLayers": [
+      "array",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/national-weather-service-openapi.json#GET /stations/{stationId}/observations/latest"
+    ]
+   },
+   "noaa": {
+    "segments": [
+     "latest"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": "string",
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "station": "string",
+     "stationId": "string",
+     "stationName": "string",
+     "timestamp": "string",
+     "rawMessage": "string",
+     "textDescription": "string",
+     "icon": "string",
+     "presentWeather": "array",
+     "temperature": "object",
+     "dewpoint": "object",
+     "windDirection": "object",
+     "windSpeed": "object",
+     "windGust": "object",
+     "barometricPressure": "object",
+     "seaLevelPressure": "object",
+     "visibility": "object",
+     "maxTemperatureLast24Hours": "object",
+     "minTemperatureLast24Hours": "object",
+     "precipitationLastHour": "object",
+     "precipitationLast3Hours": "object",
+     "precipitationLast6Hours": "object",
+     "relativeHumidity": "object",
+     "windChill": "object",
+     "heatIndex": "object",
+     "cloudLayers": "array"
+    },
+    "evidence": [
+     "openapi/_original/noaa-nws-openapi.yml#GET /stations/{stationId}/observations/latest"
+    ]
+   },
+   "noaa-gov": {
+    "segments": [
+     "latest"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "station": "string",
+     "stationId": "string",
+     "stationName": "string",
+     "timestamp": "string",
+     "rawMessage": "string",
+     "textDescription": "string",
+     "icon": [
+      "string",
+      "null"
+     ],
+     "presentWeather": "array",
+     "temperature": "object",
+     "dewpoint": "object",
+     "windDirection": "object",
+     "windSpeed": "object",
+     "windGust": "object",
+     "barometricPressure": "object",
+     "seaLevelPressure": "object",
+     "visibility": "object",
+     "maxTemperatureLast24Hours": "object",
+     "minTemperatureLast24Hours": "object",
+     "precipitationLastHour": "object",
+     "precipitationLast3Hours": "object",
+     "precipitationLast6Hours": "object",
+     "relativeHumidity": "object",
+     "windChill": "object",
+     "heatIndex": "object",
+     "cloudLayers": [
+      "array",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/weather-gov-api-openapi.json#GET /stations/{stationId}/observations/latest"
+    ]
+   },
+   "openweathermap": {
+    "segments": [
+     "current"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "lat": "number",
+     "lon": "number",
+     "timezone": "string",
+     "timezone_offset": "integer",
+     "current": "object"
+    },
+    "evidence": [
+     "openapi/_original/openweathermap-one-call-openapi.yml#GET /current"
+    ]
+   },
+   "tomorrow-io": {
+    "segments": [
+     "realtime"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "time": "string",
+     "values": "object"
+    },
+    "evidence": [
+     "openapi/_original/tomorrow-io-weather-api-openapi.yml#GET /weather/realtime"
+    ]
+   },
+   "weather-gov": {
+    "segments": [
+     "latest"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "station": "string",
+     "stationId": "string",
+     "stationName": "string",
+     "timestamp": "string",
+     "rawMessage": "string",
+     "textDescription": "string",
+     "icon": [
+      "string",
+      "null"
+     ],
+     "presentWeather": "array",
+     "temperature": "object",
+     "dewpoint": "object",
+     "windDirection": "object",
+     "windSpeed": "object",
+     "windGust": "object",
+     "barometricPressure": "object",
+     "seaLevelPressure": "object",
+     "visibility": "object",
+     "maxTemperatureLast24Hours": "object",
+     "minTemperatureLast24Hours": "object",
+     "precipitationLastHour": "object",
+     "precipitationLast3Hours": "object",
+     "precipitationLast6Hours": "object",
+     "relativeHumidity": "object",
+     "windChill": "object",
+     "heatIndex": "object",
+     "cloudLayers": [
+      "array",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /stations/{stationId}/observations/latest"
+    ]
+   },
+   "weatherapi": {
+    "segments": [
+     "current"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "location": "object",
+     "current": "object"
+    },
+    "evidence": [
+     "openapi/_original/weatherapi-openapi-original.yml#GET /current.json"
+    ]
+   },
+   "weatherbit": {
+    "segments": [
+     "current"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "city_name": "string",
+     "state_code": "string",
+     "country_code": "string",
+     "timezone": "string",
+     "lat": "number",
+     "lon": "number",
+     "station": "string",
+     "sources": "array",
+     "vis": "integer",
+     "rh": "integer",
+     "dewpt": "number",
+     "wind_dir": "integer",
+     "wind_cdir": "string",
+     "wind_cdir_full": "string",
+     "wind_speed": "number",
+     "temp": "number",
+     "app_temp": "number",
+     "clouds": "integer",
+     "weather": "object",
+     "datetime": "string",
+     "ob_time": "string",
+     "ts": "number",
+     "sunrise": "string",
+     "sunset": "string",
+     "slp": "number",
+     "pres": "number",
+     "aqi": "number",
+     "uv": "number",
+     "solar_rad": "number",
+     "ghi": "number",
+     "dni": "number",
+     "dhi": "number",
+     "elev_angle": "number",
+     "pod": "string",
+     "precip": "number",
+     "snow": "number"
+    },
+    "evidence": [
+     "openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /current"
+    ]
+   },
+   "wunderground": {
+    "segments": [
+     "current"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "stationID": "string",
+     "obsTimeUtc": "string",
+     "obsTimeLocal": "string",
+     "neighborhood": "string",
+     "softwareType": "string",
+     "country": "string",
+     "solarRadiation": "number",
+     "lon": "number",
+     "lat": "number",
+     "uv": "number",
+     "winddir": "integer",
+     "windDirectionCardinal": "string",
+     "humidity": "integer",
+     "epoch": "integer",
+     "qcStatus": "integer",
+     "realtimeFrequency": "integer",
+     "imperial": "object",
+     "metric": "object",
+     "uk_hybrid": "object",
+     "metric_si": "object"
+    },
+    "evidence": [
+     "openapi/_original/wunderground-pws-api.yml#GET /v2/pws/observations/current"
+    ]
+   },
+   "yr-no": {
+    "segments": [
+     "current"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "title": "string",
+     "description": "string",
+     "event": "string",
+     "eventAwarenessName": "string",
+     "severity": "string",
+     "certainty": "string",
+     "awareness_level": "string",
+     "onset": "string",
+     "expires": "string",
+     "published": "string",
+     "msgType": "string",
+     "county": "array",
+     "geographicDomain": "string",
+     "incidentName": "string",
+     "resources": "array",
+     "geometry": "object"
+    },
+    "evidence": [
+     "openapi/_original/yr-no-metalerts-openapi.yml#GET /current"
+    ]
+   }
+  },
+  "forecast": {
+   "2s-io": {
+    "segments": [
+     "forecast"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "name": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "isDaytime": "boolean",
+     "temperature": "number",
+     "temperatureUnit": "string",
+     "windSpeed": "string",
+     "windDirection": "string",
+     "precipProbabilityPct": "number",
+     "shortForecast": "string",
+     "detailedForecast": "string"
+    },
+    "evidence": [
+     "openapi/_original/2s-io-openapi.json#GET /api/weather/forecast"
+    ]
+   },
+   "apifreaks-api-hub-for-developers": {
+    "segments": [
+     "forecast"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "location": "object",
+     "forecast": "object"
+    },
+    "evidence": [
+     "openapi/_original/apifreaks-api-hub-for-developers-weather-forecast-openapi.json#GET /forecast"
+    ]
+   },
+   "climateai": {
+    "segments": [
+     "forecast"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "created_at": "string",
+     "init_time": "string",
+     "kind": "string",
+     "location": "object",
+     "granularity": "string",
+     "variables": "object"
+    },
+    "evidence": [
+     "openapi/_original/climateai-weather-openapi.yml#GET /v2/forecast"
+    ]
+   },
+   "dtn": {
+    "segments": [
+     "forecast",
+     "forecasts",
+     "hourly",
+     "daily"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "windDirection10m": "number",
+     "windGust10m": "number",
+     "windSpeed10m": "number",
+     "windDirection11m": "number",
+     "windGust11m": "number",
+     "windSpeed11m": "number",
+     "windDirection12m": "number",
+     "windGust12m": "number",
+     "windSpeed12m": "number",
+     "windDirection13m": "number",
+     "windGust13m": "number",
+     "windSpeed13m": "number",
+     "windDirection14m": "number",
+     "windGust14m": "number",
+     "windSpeed14m": "number",
+     "windDirection15m": "number",
+     "windGust15m": "number",
+     "windSpeed15m": "number",
+     "windDirection16m": "number",
+     "windGust16m": "number",
+     "windSpeed16m": "number",
+     "windDirection17m": "number",
+     "windGust17m": "number",
+     "windSpeed17m": "number",
+     "windDirection18m": "number",
+     "windGust18m": "number",
+     "windSpeed18m": "number",
+     "windDirection19m": "number",
+     "windGust19m": "number",
+     "windSpeed19m": "number",
+     "windDirection20m": "number",
+     "windGust20m": "number",
+     "windSpeed20m": "number",
+     "windDirection21m": "number",
+     "windGust21m": "number",
+     "windSpeed21m": "number",
+     "windDirection22m": "number",
+     "windGust22m": "number",
+     "windSpeed22m": "number",
+     "windDirection23m": "number",
+     "windGust23m": "number",
+     "windSpeed23m": "number",
+     "windDirection24m": "number",
+     "windGust24m": "number",
+     "windSpeed24m": "number",
+     "windDirection25m": "number",
+     "windGust25m": "number",
+     "windSpeed25m": "number",
+     "windDirection26m": "number",
+     "windGust26m": "number",
+     "windSpeed26m": "number",
+     "windDirection27m": "number",
+     "windGust27m": "number",
+     "windSpeed27m": "number",
+     "windDirection28m": "number",
+     "windGust28m": "number",
+     "windSpeed28m": "number",
+     "windDirection29m": "number",
+     "windGust29m": "number",
+     "windSpeed29m": "number",
+     "windDirection30m": "number",
+     "windGust30m": "number",
+     "windSpeed30m": "number",
+     "windDirection31m": "number",
+     "windGust31m": "number",
+     "windSpeed31m": "number",
+     "windDirection32m": "number",
+     "windGust32m": "number",
+     "windSpeed32m": "number",
+     "windDirection33m": "number",
+     "windGust33m": "number",
+     "windSpeed33m": "number",
+     "windDirection34m": "number",
+     "windGust34m": "number",
+     "windSpeed34m": "number",
+     "windDirection35m": "number",
+     "windGust35m": "number",
+     "windSpeed35m": "number",
+     "windDirection36m": "number",
+     "windGust36m": "number",
+     "windSpeed36m": "number",
+     "windDirection37m": "number",
+     "windGust37m": "number",
+     "windSpeed37m": "number",
+     "windDirection38m": "number",
+     "windGust38m": "number",
+     "windSpeed38m": "number",
+     "windDirection39m": "number",
+     "windGust39m": "number",
+     "windSpeed39m": "number",
+     "windDirection40m": "number",
+     "windGust40m": "number",
+     "windSpeed40m": "number",
+     "windDirection41m": "number",
+     "windGust41m": "number",
+     "windSpeed41m": "number",
+     "windDirection42m": "number",
+     "windGust42m": "number",
+     "windSpeed42m": "number",
+     "windDirection43m": "number",
+     "windGust43m": "number",
+     "windSpeed43m": "number",
+     "windDirection44m": "number",
+     "windGust44m": "number",
+     "windSpeed44m": "number",
+     "windDirection45m": "number",
+     "windGust45m": "number",
+     "windSpeed45m": "number",
+     "windDirection46m": "number",
+     "windGust46m": "number",
+     "windSpeed46m": "number",
+     "windDirection47m": "number",
+     "windGust47m": "number",
+     "windSpeed47m": "number",
+     "windDirection48m": "number",
+     "windGust48m": "number",
+     "windSpeed48m": "number",
+     "windDirection49m": "number",
+     "windGust49m": "number",
+     "windSpeed49m": "number",
+     "windDirection50m": "number",
+     "windGust50m": "number",
+     "windSpeed50m": "number",
+     "windDirection51m": "number",
+     "windGust51m": "number",
+     "windSpeed51m": "number",
+     "windDirection52m": "number",
+     "windGust52m": "number",
+     "windSpeed52m": "number",
+     "windDirection53m": "number",
+     "windGust53m": "number",
+     "windSpeed53m": "number",
+     "windDirection54m": "number",
+     "windGust54m": "number",
+     "windSpeed54m": "number",
+     "windDirection55m": "number",
+     "windGust55m": "number",
+     "windSpeed55m": "number",
+     "windDirection56m": "number",
+     "windGust56m": "number",
+     "windSpeed56m": "number",
+     "windDirection57m": "number",
+     "windGust57m": "number",
+     "windSpeed57m": "number",
+     "windDirection58m": "number",
+     "windGust58m": "number",
+     "windSpeed58m": "number",
+     "windDirection59m": "number",
+     "windGust59m": "number",
+     "windSpeed59m": "number",
+     "windDirection60m": "number",
+     "windGust60m": "number",
+     "windSpeed60m": "number",
+     "windDirection61m": "number",
+     "windGust61m": "number",
+     "windSpeed61m": "number",
+     "windDirection62m": "number",
+     "windGust62m": "number",
+     "windSpeed62m": "number",
+     "windDirection63m": "number",
+     "windGust63m": "number",
+     "windSpeed63m": "number",
+     "windDirection64m": "number",
+     "windGust64m": "number",
+     "windSpeed64m": "number",
+     "windDirection65m": "number",
+     "windGust65m": "number",
+     "windSpeed65m": "number",
+     "windDirection66m": "number",
+     "windGust66m": "number",
+     "windSpeed66m": "number",
+     "windDirection67m": "number",
+     "windGust67m": "number",
+     "windSpeed67m": "number",
+     "windDirection68m": "number",
+     "windGust68m": "number",
+     "windSpeed68m": "number",
+     "windDirection69m": "number",
+     "windGust69m": "number",
+     "windSpeed69m": "number",
+     "windDirection70m": "number",
+     "windGust70m": "number",
+     "windSpeed70m": "number",
+     "windDirection71m": "number",
+     "windGust71m": "number",
+     "windSpeed71m": "number",
+     "windDirection72m": "number",
+     "windGust72m": "number",
+     "windSpeed72m": "number",
+     "windDirection73m": "number",
+     "windGust73m": "number",
+     "windSpeed73m": "number",
+     "windDirection74m": "number",
+     "windGust74m": "number",
+     "windSpeed74m": "number",
+     "windDirection75m": "number",
+     "windGust75m": "number",
+     "windSpeed75m": "number",
+     "windDirection76m": "number",
+     "windGust76m": "number",
+     "windSpeed76m": "number",
+     "windDirection77m": "number",
+     "windGust77m": "number",
+     "windSpeed77m": "number",
+     "windDirection78m": "number",
+     "windGust78m": "number",
+     "windSpeed78m": "number",
+     "windDirection79m": "number",
+     "windGust79m": "number",
+     "windSpeed79m": "number",
+     "windDirection80m": "number",
+     "windGust80m": "number",
+     "windSpeed80m": "number",
+     "windDirection81m": "number",
+     "windGust81m": "number",
+     "windSpeed81m": "number",
+     "windDirection82m": "number",
+     "windGust82m": "number",
+     "windSpeed82m": "number",
+     "windDirection83m": "number",
+     "windGust83m": "number",
+     "windSpeed83m": "number",
+     "windDirection84m": "number",
+     "windGust84m": "number",
+     "windSpeed84m": "number",
+     "windDirection85m": "number",
+     "windGust85m": "number",
+     "windSpeed85m": "number",
+     "windDirection86m": "number",
+     "windGust86m": "number",
+     "windSpeed86m": "number",
+     "windDirection87m": "number",
+     "windGust87m": "number",
+     "windSpeed87m": "number",
+     "windDirection88m": "number",
+     "windGust88m": "number",
+     "windSpeed88m": "number",
+     "windDirection89m": "number",
+     "windGust89m": "number",
+     "windSpeed89m": "number",
+     "windDirection90m": "number",
+     "windGust90m": "number",
+     "windSpeed90m": "number",
+     "windDirection91m": "number",
+     "windGust91m": "number",
+     "windSpeed91m": "number",
+     "windDirection92m": "number",
+     "windGust92m": "number",
+     "windSpeed92m": "number",
+     "windDirection93m": "number",
+     "windGust93m": "number",
+     "windSpeed93m": "number",
+     "windDirection94m": "number",
+     "windGust94m": "number",
+     "windSpeed94m": "number",
+     "windDirection95m": "number",
+     "windGust95m": "number",
+     "windSpeed95m": "number",
+     "windDirection96m": "number",
+     "windGust96m": "number",
+     "windSpeed96m": "number",
+     "windDirection97m": "number",
+     "windGust97m": "number",
+     "windSpeed97m": "number",
+     "windDirection98m": "number",
+     "windGust98m": "number",
+     "windSpeed98m": "number",
+     "windDirection99m": "number",
+     "windGust99m": "number",
+     "windSpeed99m": "number",
+     "windDirection100m": "number",
+     "windGust100m": "number",
+     "windSpeed100m": "number",
+     "windDirection101m": "number",
+     "windGust101m": "number",
+     "windSpeed101m": "number",
+     "windDirection102m": "number",
+     "windGust102m": "number",
+     "windSpeed102m": "number",
+     "windDirection103m": "number",
+     "windGust103m": "number",
+     "windSpeed103m": "number",
+     "windDirection104m": "number",
+     "windGust104m": "number",
+     "windSpeed104m": "number",
+     "windDirection105m": "number",
+     "windGust105m": "number",
+     "windSpeed105m": "number",
+     "windDirection106m": "number",
+     "windGust106m": "number",
+     "windSpeed106m": "number",
+     "windDirection107m": "number",
+     "windGust107m": "number",
+     "windSpeed107m": "number",
+     "windDirection108m": "number",
+     "windGust108m": "number",
+     "windSpeed108m": "number",
+     "windDirection109m": "number",
+     "windGust109m": "number",
+     "windSpeed109m": "number",
+     "windDirection110m": "number",
+     "windGust110m": "number",
+     "windSpeed110m": "number",
+     "windDirection111m": "number",
+     "windGust111m": "number",
+     "windSpeed111m": "number",
+     "windDirection112m": "number",
+     "windGust112m": "number",
+     "windSpeed112m": "number",
+     "windDirection113m": "number",
+     "windGust113m": "number",
+     "windSpeed113m": "number",
+     "windDirection114m": "number",
+     "windGust114m": "number",
+     "windSpeed114m": "number",
+     "windDirection115m": "number",
+     "windGust115m": "number",
+     "windSpeed115m": "number",
+     "windDirection116m": "number",
+     "windGust116m": "number",
+     "windSpeed116m": "number",
+     "windDirection117m": "number",
+     "windGust117m": "number",
+     "windSpeed117m": "number",
+     "windDirection118m": "number",
+     "windGust118m": "number",
+     "windSpeed118m": "number",
+     "windDirection119m": "number",
+     "windGust119m": "number",
+     "windSpeed119m": "number",
+     "windDirection120m": "number",
+     "windGust120m": "number",
+     "windSpeed120m": "number",
+     "windDirection121m": "number",
+     "windGust121m": "number",
+     "windSpeed121m": "number",
+     "windDirection122m": "number",
+     "windGust122m": "number",
+     "windSpeed122m": "number",
+     "windDirection123m": "number",
+     "windGust123m": "number",
+     "windSpeed123m": "number",
+     "windDirection124m": "number",
+     "windGust124m": "number",
+     "windSpeed124m": "number",
+     "windDirection125m": "number",
+     "windGust125m": "number",
+     "windSpeed125m": "number",
+     "windDirection126m": "number",
+     "windGust126m": "number",
+     "windSpeed126m": "number",
+     "windDirection127m": "number",
+     "windGust127m": "number",
+     "windSpeed127m": "number",
+     "windDirection128m": "number",
+     "windGust128m": "number",
+     "windSpeed128m": "number",
+     "windDirection129m": "number",
+     "windGust129m": "number",
+     "windSpeed129m": "number",
+     "windDirection130m": "number",
+     "windGust130m": "number",
+     "windSpeed130m": "number",
+     "windDirection131m": "number",
+     "windGust131m": "number",
+     "windSpeed131m": "number",
+     "windDirection132m": "number",
+     "windGust132m": "number",
+     "windSpeed132m": "number",
+     "windDirection133m": "number",
+     "windGust133m": "number",
+     "windSpeed133m": "number",
+     "windDirection134m": "number",
+     "windGust134m": "number",
+     "windSpeed134m": "number",
+     "windDirection135m": "number",
+     "windGust135m": "number",
+     "windSpeed135m": "number",
+     "windDirection136m": "number",
+     "windGust136m": "number",
+     "windSpeed136m": "number",
+     "windDirection137m": "number",
+     "windGust137m": "number",
+     "windSpeed137m": "number",
+     "windDirection138m": "number",
+     "windGust138m": "number",
+     "windSpeed138m": "number",
+     "windDirection139m": "number",
+     "windGust139m": "number",
+     "windSpeed139m": "number",
+     "windDirection140m": "number",
+     "windGust140m": "number",
+     "windSpeed140m": "number",
+     "windDirection141m": "number",
+     "windGust141m": "number",
+     "windSpeed141m": "number",
+     "windDirection142m": "number",
+     "windGust142m": "number",
+     "windSpeed142m": "number",
+     "windDirection143m": "number",
+     "windGust143m": "number",
+     "windSpeed143m": "number",
+     "windDirection144m": "number",
+     "windGust144m": "number",
+     "windSpeed144m": "number",
+     "windDirection145m": "number",
+     "windGust145m": "number",
+     "windSpeed145m": "number",
+     "windDirection146m": "number",
+     "windGust146m": "number",
+     "windSpeed146m": "number",
+     "windDirection147m": "number",
+     "windGust147m": "number",
+     "windSpeed147m": "number",
+     "windDirection148m": "number",
+     "windGust148m": "number",
+     "windSpeed148m": "number",
+     "windDirection149m": "number",
+     "windGust149m": "number",
+     "windSpeed149m": "number",
+     "windDirection150m": "number",
+     "windGust150m": "number",
+     "windSpeed150m": "number",
+     "windDirection151m": "number",
+     "windGust151m": "number",
+     "windSpeed151m": "number",
+     "windDirection152m": "number",
+     "windGust152m": "number",
+     "windSpeed152m": "number",
+     "windDirection153m": "number",
+     "windGust153m": "number",
+     "windSpeed153m": "number",
+     "windDirection154m": "number",
+     "windGust154m": "number",
+     "windSpeed154m": "number",
+     "windDirection155m": "number",
+     "windGust155m": "number",
+     "windSpeed155m": "number",
+     "windDirection156m": "number",
+     "windGust156m": "number",
+     "windSpeed156m": "number",
+     "windDirection157m": "number",
+     "windGust157m": "number",
+     "windSpeed157m": "number",
+     "windDirection158m": "number",
+     "windGust158m": "number",
+     "windSpeed158m": "number",
+     "windDirection159m": "number",
+     "windGust159m": "number",
+     "windSpeed159m": "number",
+     "windDirection160m": "number",
+     "windGust160m": "number",
+     "windSpeed160m": "number",
+     "windDirection161m": "number",
+     "windGust161m": "number",
+     "windSpeed161m": "number",
+     "windDirection162m": "number",
+     "windGust162m": "number",
+     "windSpeed162m": "number",
+     "windDirection163m": "number",
+     "windGust163m": "number",
+     "windSpeed163m": "number",
+     "windDirection164m": "number",
+     "windGust164m": "number",
+     "windSpeed164m": "number",
+     "windDirection165m": "number",
+     "windGust165m": "number",
+     "windSpeed165m": "number",
+     "windDirection166m": "number",
+     "windGust166m": "number",
+     "windSpeed166m": "number",
+     "windDirection167m": "number",
+     "windGust167m": "number",
+     "windSpeed167m": "number",
+     "windDirection168m": "number",
+     "windGust168m": "number",
+     "windSpeed168m": "number",
+     "windDirection169m": "number",
+     "windGust169m": "number",
+     "windSpeed169m": "number",
+     "windDirection170m": "number",
+     "windGust170m": "number",
+     "windSpeed170m": "number",
+     "windDirection171m": "number",
+     "windGust171m": "number",
+     "windSpeed171m": "number",
+     "windDirection172m": "number",
+     "windGust172m": "number",
+     "windSpeed172m": "number",
+     "windDirection173m": "number",
+     "windGust173m": "number",
+     "windSpeed173m": "number",
+     "windDirection174m": "number",
+     "windGust174m": "number",
+     "windSpeed174m": "number",
+     "windDirection175m": "number",
+     "windGust175m": "number",
+     "windSpeed175m": "number",
+     "windDirection176m": "number",
+     "windGust176m": "number",
+     "windSpeed176m": "number",
+     "windDirection177m": "number",
+     "windGust177m": "number",
+     "windSpeed177m": "number",
+     "windDirection178m": "number",
+     "windGust178m": "number",
+     "windSpeed178m": "number",
+     "windDirection179m": "number",
+     "windGust179m": "number",
+     "windSpeed179m": "number",
+     "windDirection180m": "number",
+     "windGust180m": "number",
+     "windSpeed180m": "number",
+     "windDirection181m": "number",
+     "windGust181m": "number",
+     "windSpeed181m": "number",
+     "windDirection182m": "number",
+     "windGust182m": "number",
+     "windSpeed182m": "number",
+     "windDirection183m": "number",
+     "windGust183m": "number",
+     "windSpeed183m": "number",
+     "windDirection184m": "number",
+     "windGust184m": "number",
+     "windSpeed184m": "number",
+     "windDirection185m": "number",
+     "windGust185m": "number",
+     "windSpeed185m": "number",
+     "windDirection186m": "number",
+     "windGust186m": "number",
+     "windSpeed186m": "number",
+     "windDirection187m": "number",
+     "windGust187m": "number",
+     "windSpeed187m": "number",
+     "windDirection188m": "number",
+     "windGust188m": "number",
+     "windSpeed188m": "number",
+     "windDirection189m": "number",
+     "windGust189m": "number",
+     "windSpeed189m": "number",
+     "windDirection190m": "number",
+     "windGust190m": "number",
+     "windSpeed190m": "number",
+     "windDirection191m": "number",
+     "windGust191m": "number",
+     "windSpeed191m": "number",
+     "windDirection192m": "number",
+     "windGust192m": "number",
+     "windSpeed192m": "number",
+     "windDirection193m": "number",
+     "windGust193m": "number",
+     "windSpeed193m": "number",
+     "windDirection194m": "number",
+     "windGust194m": "number",
+     "windSpeed194m": "number",
+     "windDirection195m": "number",
+     "windGust195m": "number",
+     "windSpeed195m": "number",
+     "windDirection196m": "number",
+     "windGust196m": "number",
+     "windSpeed196m": "number",
+     "windDirection197m": "number",
+     "windGust197m": "number",
+     "windSpeed197m": "number",
+     "windDirection198m": "number",
+     "windGust198m": "number",
+     "windSpeed198m": "number",
+     "windDirection199m": "number",
+     "windGust199m": "number",
+     "windSpeed199m": "number",
+     "windDirection200m": "number",
+     "windGust200m": "number",
+     "windSpeed200m": "number",
+     "windSpeed10mLowerBound": "number",
+     "windSpeed10mUpperBound": "number",
+     "windSpeed100mLowerBound": "number",
+     "windSpeed100mUpperBound": "number",
+     "geometry": "object",
+     "airTemp": "number",
+     "directNormalIrradiance": "number",
+     "diffuseHorizontalIrradiance": "number",
+     "shortWaveRadiation": "number",
+     "snowfallAmount": "number",
+     "generatedAt": "string",
+     "units": "string",
+     "location": "object",
+     "forecasts": "array"
+    },
+    "evidence": [
+     "openapi/_original/dtn-radarscope-radar-products-openapi.json#GET /feeds/v3/tropical_cyclone/forecasts",
+     "openapi/_original/dtn-renewables-api-openapi.json#GET /v1/hub-height-winds/forecast",
+     "openapi/_original/dtn-renewables-api-openapi.json#GET /v1/solar-irradiance/forecast",
+     "openapi/_original/dtn-weather-conditions-openapi.yml#GET /forecast/daily",
+     "openapi/_original/dtn-weather-conditions-openapi.yml#GET /forecast/hourly"
+    ]
+   },
+   "dynamicfeed-ai": {
+    "segments": [
+     "forecast"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dynamicfeed-ai-openapi.json#GET /forecast",
+     "openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/openweather/forecast"
+    ]
+   },
+   "leaf-agriculture": {
+    "segments": [
+     "daily",
+     "hourly"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/users/{leafUserId}/weather/historical/field/{fieldId}/daily",
+     "openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/users/{leafUserId}/weather/historical/field/{fieldId}/hourly",
+     "openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/weather/forecast/daily/{lat},{lon}",
+     "openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/weather/forecast/hourly/{lat},{lon}",
+     "openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/weather/historical/daily/{lat},{lon}",
+     "openapi/_original/leaf-agriculture-openapi.yml#GET /services/weather/api/weather/historical/hourly/{lat},{lon}"
+    ]
+   },
+   "national-weather-service": {
+    "segments": [
+     "forecast",
+     "hourly"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "units": "string",
+     "forecastGenerator": "string",
+     "generatedAt": "string",
+     "updateTime": "string",
+     "validTimes": null,
+     "elevation": "object",
+     "periods": "array",
+     "zone": "string",
+     "updated": "string"
+    },
+    "evidence": [
+     "openapi/_original/national-weather-service-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast",
+     "openapi/_original/national-weather-service-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast/hourly",
+     "openapi/_original/national-weather-service-openapi.json#GET /zones/{type}/{zoneId}/forecast"
+    ]
+   },
+   "noaa": {
+    "segments": [
+     "forecast",
+     "hourly"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": "string",
+     "properties": "object",
+     "units": "string",
+     "forecastGenerator": "string",
+     "generatedAt": "string",
+     "updateTime": "string",
+     "validTimes": null,
+     "elevation": "object",
+     "periods": "array",
+     "zone": "string",
+     "updated": "string"
+    },
+    "evidence": [
+     "openapi/_original/noaa-nws-openapi.yml#GET /gridpoints/{wfo}/{x},{y}/forecast",
+     "openapi/_original/noaa-nws-openapi.yml#GET /gridpoints/{wfo}/{x},{y}/forecast/hourly",
+     "openapi/_original/noaa-nws-openapi.yml#GET /zones/{type}/{zoneId}/forecast"
+    ]
+   },
+   "noaa-gov": {
+    "segments": [
+     "forecast",
+     "hourly"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "units": "string",
+     "forecastGenerator": "string",
+     "generatedAt": "string",
+     "updateTime": "string",
+     "validTimes": null,
+     "elevation": "object",
+     "periods": "array",
+     "zone": "string",
+     "updated": "string"
+    },
+    "evidence": [
+     "openapi/_original/weather-gov-api-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast",
+     "openapi/_original/weather-gov-api-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast/hourly",
+     "openapi/_original/weather-gov-api-openapi.json#GET /zones/{type}/{zoneId}/forecast"
+    ]
+   },
+   "open-meteo": {
+    "segments": [
+     "forecast"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "latitude": "number",
+     "longitude": "number",
+     "elevation": "number",
+     "generationtime_ms": "number",
+     "utc_offset_seconds": "integer",
+     "timezone": "string",
+     "timezone_abbreviation": "string",
+     "hourly": "object",
+     "hourly_units": "object",
+     "daily": "object",
+     "daily_units": "object",
+     "current": "object",
+     "current_units": "object",
+     "minutely_15": "object",
+     "minutely_15_units": "object"
+    },
+    "evidence": [
+     "openapi/_original/open-meteo-forecast-openapi.yml#GET /v1/forecast"
+    ]
+   },
+   "openuv": {
+    "segments": [
+     "forecast"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "uv": "number",
+     "uv_time": "string",
+     "sun_position": "object"
+    },
+    "evidence": [
+     "openapi/_original/openuv-openapi.yml#GET /forecast"
+    ]
+   },
+   "openweather": {
+    "segments": [
+     "onecall",
+     "forecast"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "lat": "number",
+     "lon": "number",
+     "timezone": "string",
+     "timezone_offset": "integer",
+     "current": "object",
+     "minutely": "array",
+     "hourly": "array",
+     "daily": "array",
+     "alerts": "array",
+     "coord": "object",
+     "list": "array"
+    },
+    "evidence": [
+     "openapi/_original/openweather-openapi.yml#GET /air_pollution/forecast",
+     "openapi/_original/openweather-openapi.yml#GET /onecall"
+    ]
+   },
+   "openweathermap": {
+    "segments": [
+     "forecast",
+     "hourly",
+     "daily"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "coord": "object",
+     "list": "array",
+     "cod": "string",
+     "message": "number",
+     "cnt": "integer",
+     "city": "object"
+    },
+    "evidence": [
+     "openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution/forecast",
+     "openapi/_original/openweathermap-forecast-openapi.yml#GET /forecast",
+     "openapi/_original/openweathermap-forecast-openapi.yml#GET /forecast/daily",
+     "openapi/_original/openweathermap-forecast-openapi.yml#GET /forecast/hourly"
+    ]
+   },
+   "tomorrow-io": {
+    "segments": [
+     "timelines",
+     "forecast"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "timelines": "object",
+     "location": "object",
+     "timestep": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "intervals": "array",
+     "fields": "array",
+     "timesteps": "array",
+     "units": "string",
+     "timezone": "string"
+    },
+    "evidence": [
+     "openapi/_original/tomorrow-io-weather-api-openapi.yml#GET /timelines",
+     "openapi/_original/tomorrow-io-weather-api-openapi.yml#GET /weather/forecast",
+     "openapi/_original/tomorrow-io-weather-api-openapi.yml#POST /timelines"
+    ]
+   },
+   "weather-gov": {
+    "segments": [
+     "forecast",
+     "hourly"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "units": "string",
+     "forecastGenerator": "string",
+     "generatedAt": "string",
+     "updateTime": "string",
+     "validTimes": null,
+     "elevation": "object",
+     "periods": "array",
+     "zone": "string",
+     "updated": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /gridpoints/{wfo}/{x},{y}/forecast",
+     "openapi/_original/openapi.yml#GET /gridpoints/{wfo}/{x},{y}/forecast/hourly",
+     "openapi/_original/openapi.yml#GET /zones/{type}/{zoneId}/forecast"
+    ]
+   },
+   "weatherapi": {
+    "segments": [
+     "forecast"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "location": "object",
+     "current": "object",
+     "forecast": "object",
+     "alerts": "object"
+    },
+    "evidence": [
+     "openapi/_original/weatherapi-openapi-original.yml#GET /forecast.json"
+    ]
+   },
+   "weatherbit": {
+    "segments": [
+     "daily",
+     "hourly"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "city_name": "string",
+     "state_code": "string",
+     "country_code": "string",
+     "lat": "number",
+     "lon": "number",
+     "timezone": "string",
+     "data": "array"
+    },
+    "evidence": [
+     "openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /forecast/daily",
+     "openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /forecast/hourly"
+    ]
+   },
+   "xweather": {
+    "segments": [
+     "forecasts"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "success": "boolean",
+     "error": "object",
+     "response": "object"
+    },
+    "evidence": [
+     "openapi/_original/xweather-weather-api-openapi.yml#GET /forecasts/{location}"
+    ]
+   }
+  },
+  "historical_weather": {
+   "2s-io": {
+    "segments": [
+     "history"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "date": "string",
+     "tempMaxC": "number",
+     "tempMinC": "number",
+     "tempMeanC": "number",
+     "precipMm": "number",
+     "windMaxKmh": "number",
+     "precipHours": "number"
+    },
+    "evidence": [
+     "openapi/_original/2s-io-openapi.json#GET /api/weather/history"
+    ]
+   },
+   "apifreaks-api-hub-for-developers": {
+    "segments": [
+     "historical",
+     "history"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "totalPages": "integer",
+     "currentPage": "integer",
+     "totalRecords": "integer",
+     "historicalDnsRecords": "array",
+     "status": "boolean",
+     "whois": "string",
+     "total_records": "string",
+     "whois_domains_historical": "array",
+     "success": "boolean",
+     "date": "string",
+     "rates": "object",
+     "base": "string",
+     "location": "object",
+     "historical": "object"
+    },
+    "evidence": [
+     "openapi/_original/apifreaks-api-hub-for-developers-dns-history-lookup-openapi.json#GET /domain/dns/history",
+     "openapi/_original/apifreaks-api-hub-for-developers-domain-whois-history-lookup-openapi.json#GET /domain/whois/history",
+     "openapi/_original/apifreaks-api-hub-for-developers-historical-commodity-prices-openapi.json#GET /commodity/rates/historical",
+     "openapi/_original/apifreaks-api-hub-for-developers-historical-currency-rate-openapi.json#GET /currency/rates/historical",
+     "openapi/_original/apifreaks-api-hub-for-developers-historical-weather-openapi.json#GET /historical"
+    ]
+   },
+   "climateai": {
+    "segments": [
+     "history"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "created_at": "string",
+     "kind": "string",
+     "location": "object",
+     "variables": "object",
+     "granularity": "string",
+     "date": "string",
+     "type": "string",
+     "id": "integer",
+     "attributes": "object"
+    },
+    "evidence": [
+     "openapi/_original/climateai-weather-openapi.yml#GET /v1/history",
+     "openapi/_original/climateai-weather-openapi.yml#GET /v2/history"
+    ]
+   },
+   "dynamicfeed-ai": {
+    "segments": [
+     "history"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dynamicfeed-ai-openapi.json#GET /benchmarks/history",
+     "openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/benchmark/history",
+     "openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/history"
+    ]
+   },
+   "leaf-agriculture": {
+    "segments": [
+     "historical"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/leaf-agriculture-openapi.yml#GET /services/beta/api/products/matching/operations/{operationId}/matches/{matchId}/historical"
+    ]
+   },
+   "national-weather-service": {
+    "segments": [
+     "observations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "station": "string",
+     "stationId": "string",
+     "stationName": "string",
+     "timestamp": "string",
+     "rawMessage": "string",
+     "textDescription": "string",
+     "icon": [
+      "string",
+      "null"
+     ],
+     "presentWeather": "array",
+     "temperature": "object",
+     "dewpoint": "object",
+     "windDirection": "object",
+     "windSpeed": "object",
+     "windGust": "object",
+     "barometricPressure": "object",
+     "seaLevelPressure": "object",
+     "visibility": "object",
+     "maxTemperatureLast24Hours": "object",
+     "minTemperatureLast24Hours": "object",
+     "precipitationLastHour": "object",
+     "precipitationLast3Hours": "object",
+     "precipitationLast6Hours": "object",
+     "relativeHumidity": "object",
+     "windChill": "object",
+     "heatIndex": "object",
+     "cloudLayers": [
+      "array",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/national-weather-service-openapi.json#GET /stations/{stationId}/observations",
+     "openapi/_original/national-weather-service-openapi.json#GET /stations/{stationId}/observations/{time}"
+    ]
+   },
+   "noaa": {
+    "segments": [
+     "observations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": "string",
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "station": "string",
+     "stationId": "string",
+     "stationName": "string",
+     "timestamp": "string",
+     "rawMessage": "string",
+     "textDescription": "string",
+     "icon": "string",
+     "presentWeather": "array",
+     "temperature": "object",
+     "dewpoint": "object",
+     "windDirection": "object",
+     "windSpeed": "object",
+     "windGust": "object",
+     "barometricPressure": "object",
+     "seaLevelPressure": "object",
+     "visibility": "object",
+     "maxTemperatureLast24Hours": "object",
+     "minTemperatureLast24Hours": "object",
+     "precipitationLastHour": "object",
+     "precipitationLast3Hours": "object",
+     "precipitationLast6Hours": "object",
+     "relativeHumidity": "object",
+     "windChill": "object",
+     "heatIndex": "object",
+     "cloudLayers": "array"
+    },
+    "evidence": [
+     "openapi/_original/noaa-nws-openapi.yml#GET /stations/{stationId}/observations",
+     "openapi/_original/noaa-nws-openapi.yml#GET /stations/{stationId}/observations/{time}"
+    ]
+   },
+   "noaa-gov": {
+    "segments": [
+     "observations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "station": "string",
+     "stationId": "string",
+     "stationName": "string",
+     "timestamp": "string",
+     "rawMessage": "string",
+     "textDescription": "string",
+     "icon": [
+      "string",
+      "null"
+     ],
+     "presentWeather": "array",
+     "temperature": "object",
+     "dewpoint": "object",
+     "windDirection": "object",
+     "windSpeed": "object",
+     "windGust": "object",
+     "barometricPressure": "object",
+     "seaLevelPressure": "object",
+     "visibility": "object",
+     "maxTemperatureLast24Hours": "object",
+     "minTemperatureLast24Hours": "object",
+     "precipitationLastHour": "object",
+     "precipitationLast3Hours": "object",
+     "precipitationLast6Hours": "object",
+     "relativeHumidity": "object",
+     "windChill": "object",
+     "heatIndex": "object",
+     "cloudLayers": [
+      "array",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/weather-gov-api-openapi.json#GET /stations/{stationId}/observations",
+     "openapi/_original/weather-gov-api-openapi.json#GET /stations/{stationId}/observations/{time}"
+    ]
+   },
+   "openweather": {
+    "segments": [
+     "timemachine",
+     "history"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "coord": "object",
+     "list": "array"
+    },
+    "evidence": [
+     "openapi/_original/openweather-openapi.yml#GET /air_pollution/history",
+     "openapi/_original/openweather-openapi.yml#GET /onecall/timemachine"
+    ]
+   },
+   "openweathermap": {
+    "segments": [
+     "history"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "coord": "object",
+     "list": "array"
+    },
+    "evidence": [
+     "openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution/history"
+    ]
+   },
+   "southendonsea": {
+    "segments": [
+     "history"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "name": "string",
+     "count": "integer",
+     "dates": "array"
+    },
+    "evidence": [
+     "openapi/_original/southendonsea-now-api-openapi.yml#GET /api/southend-now/history",
+     "openapi/_original/southendonsea-openapi.json#GET /api/southend-now/history"
+    ]
+   },
+   "weather-gov": {
+    "segments": [
+     "observations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "station": "string",
+     "stationId": "string",
+     "stationName": "string",
+     "timestamp": "string",
+     "rawMessage": "string",
+     "textDescription": "string",
+     "icon": [
+      "string",
+      "null"
+     ],
+     "presentWeather": "array",
+     "temperature": "object",
+     "dewpoint": "object",
+     "windDirection": "object",
+     "windSpeed": "object",
+     "windGust": "object",
+     "barometricPressure": "object",
+     "seaLevelPressure": "object",
+     "visibility": "object",
+     "maxTemperatureLast24Hours": "object",
+     "minTemperatureLast24Hours": "object",
+     "precipitationLastHour": "object",
+     "precipitationLast3Hours": "object",
+     "precipitationLast6Hours": "object",
+     "relativeHumidity": "object",
+     "windChill": "object",
+     "heatIndex": "object",
+     "cloudLayers": [
+      "array",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /stations/{stationId}/observations",
+     "openapi/_original/openapi.yml#GET /stations/{stationId}/observations/{time}"
+    ]
+   },
+   "weatherapi": {
+    "segments": [
+     "history"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "location": "object",
+     "current": "object",
+     "forecast": "object",
+     "alerts": "object"
+    },
+    "evidence": [
+     "openapi/_original/weatherapi-openapi-original.yml#GET /history.json"
+    ]
+   }
+  },
+  "weather_alert": {
+   "2s-io": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "event": "string",
+     "severity": "string",
+     "urgency": "string",
+     "certainty": "string",
+     "category": "string",
+     "headline": "string",
+     "areaDescription": "string",
+     "senderName": "string",
+     "response": "string",
+     "status": "string",
+     "messageType": "string",
+     "effective": "string",
+     "onset": "string",
+     "expires": "string",
+     "ends": "string",
+     "description": "string",
+     "instruction": "string"
+    },
+    "evidence": [
+     "openapi/_original/2s-io-openapi.json#GET /api/weather/alerts"
+    ]
+   },
+   "dtn": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "identifier": "string",
+     "sender": "string",
+     "sent": "string",
+     "status": "string",
+     "msgType": "string",
+     "scope": "string",
+     "code": "string",
+     "source": "string",
+     "updated": "string",
+     "restriction": "string",
+     "addresses": "string",
+     "note": "string",
+     "references": "string",
+     "info": "array",
+     "geometry": "object"
+    },
+    "evidence": [
+     "openapi/_original/dtn-alerting-api-openapi.json#GET /v2/alerts"
+    ]
+   },
+   "farmers-edge": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/farmers-edge-farmcommand-openapi-original.json#POST /integrations/leaf/alerts/"
+    ]
+   },
+   "here": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "warnings": "array",
+     "geometry": "object",
+     "route": "string",
+     "width": "integer"
+    },
+    "evidence": [
+     "openapi/_original/here-destination-weather-v1-openapi.yml#GET /weather/2.0/alerts",
+     "openapi/_original/here-destination-weather-v1-openapi.yml#POST /weather/2.0/alerts",
+     "openapi/_original/here-destination-weather-v1-openapi_2.yml#GET /weather/2.0/alerts",
+     "openapi/_original/here-destination-weather-v1-openapi_2.yml#POST /weather/2.0/alerts",
+     "openapi/_original/here-destination-weather-v3-openapi.yml#POST /alerts",
+     "openapi/_original/here-destination-weather-v3-openapi_2.yml#POST /alerts"
+    ]
+   },
+   "national-weather-service": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": null,
+     "properties": "object",
+     "areaDesc": "string",
+     "geocode": "object",
+     "affectedZones": "array",
+     "references": "array",
+     "sent": "string",
+     "effective": "string",
+     "onset": [
+      "string",
+      "null"
+     ],
+     "expires": "string",
+     "ends": [
+      "string",
+      "null"
+     ],
+     "status": "string",
+     "messageType": "string",
+     "category": "string",
+     "severity": "string",
+     "certainty": "string",
+     "urgency": "string",
+     "event": "string",
+     "sender": "string",
+     "senderName": "string",
+     "headline": [
+      "string",
+      "null"
+     ],
+     "description": "string",
+     "instruction": [
+      "string",
+      "null"
+     ],
+     "note": [
+      "string",
+      "null"
+     ],
+     "response": "string",
+     "parameters": "object",
+     "scope": "string",
+     "code": "string",
+     "language": "string",
+     "web": "string",
+     "eventCode": "object",
+     "title": "string",
+     "updated": "string",
+     "pagination": "object"
+    },
+    "evidence": [
+     "openapi/_original/national-weather-service-openapi.json#GET /alerts",
+     "openapi/_original/national-weather-service-openapi.json#GET /alerts/{id}"
+    ]
+   },
+   "noaa": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": null,
+     "properties": "object",
+     "areaDesc": "string",
+     "geocode": "object",
+     "affectedZones": "array",
+     "references": "array",
+     "sent": "string",
+     "effective": "string",
+     "onset": "string",
+     "expires": "string",
+     "ends": "string",
+     "status": "string",
+     "messageType": "string",
+     "category": "string",
+     "severity": "string",
+     "certainty": "string",
+     "urgency": "string",
+     "event": "string",
+     "sender": "string",
+     "senderName": "string",
+     "headline": "string",
+     "description": "string",
+     "instruction": "string",
+     "note": "string",
+     "response": "string",
+     "parameters": "object",
+     "scope": "string",
+     "code": "string",
+     "language": "string",
+     "web": "string",
+     "eventCode": "object",
+     "title": "string",
+     "updated": "string",
+     "pagination": "object"
+    },
+    "evidence": [
+     "openapi/_original/noaa-nws-openapi.yml#GET /alerts",
+     "openapi/_original/noaa-nws-openapi.yml#GET /alerts/{id}"
+    ]
+   },
+   "noaa-gov": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": null,
+     "properties": "object",
+     "areaDesc": "string",
+     "geocode": "object",
+     "affectedZones": "array",
+     "references": "array",
+     "sent": "string",
+     "effective": "string",
+     "onset": [
+      "string",
+      "null"
+     ],
+     "expires": "string",
+     "ends": [
+      "string",
+      "null"
+     ],
+     "status": "string",
+     "messageType": "string",
+     "category": "string",
+     "severity": "string",
+     "certainty": "string",
+     "urgency": "string",
+     "event": "string",
+     "sender": "string",
+     "senderName": "string",
+     "headline": [
+      "string",
+      "null"
+     ],
+     "description": "string",
+     "instruction": [
+      "string",
+      "null"
+     ],
+     "note": [
+      "string",
+      "null"
+     ],
+     "response": "string",
+     "parameters": "object",
+     "scope": "string",
+     "code": "string",
+     "language": "string",
+     "web": "string",
+     "eventCode": "object",
+     "title": "string",
+     "updated": "string",
+     "pagination": "object"
+    },
+    "evidence": [
+     "openapi/_original/weather-gov-api-openapi.json#GET /alerts",
+     "openapi/_original/weather-gov-api-openapi.json#GET /alerts/{id}"
+    ]
+   },
+   "openweathermap": {
+    "segments": [
+     "alert"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/openweathermap-one-call-openapi.yml#GET /alert/{alert_id}"
+    ]
+   },
+   "weather-gov": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": null,
+     "properties": "object",
+     "areaDesc": "string",
+     "geocode": "object",
+     "affectedZones": "array",
+     "references": "array",
+     "sent": "string",
+     "effective": "string",
+     "onset": [
+      "string",
+      "null"
+     ],
+     "expires": "string",
+     "ends": [
+      "string",
+      "null"
+     ],
+     "status": "string",
+     "messageType": "string",
+     "category": "string",
+     "severity": "string",
+     "certainty": "string",
+     "urgency": "string",
+     "event": "string",
+     "sender": "string",
+     "senderName": "string",
+     "headline": [
+      "string",
+      "null"
+     ],
+     "description": "string",
+     "instruction": [
+      "string",
+      "null"
+     ],
+     "note": [
+      "string",
+      "null"
+     ],
+     "response": "string",
+     "parameters": "object",
+     "scope": "string",
+     "code": "string",
+     "language": "string",
+     "web": "string",
+     "eventCode": "object",
+     "title": "string",
+     "updated": "string",
+     "pagination": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /alerts",
+     "openapi/_original/openapi.yml#GET /alerts/{id}"
+    ]
+   },
+   "weatherapi": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "location": "object",
+     "alerts": "object"
+    },
+    "evidence": [
+     "openapi/_original/weatherapi-openapi-original.yml#GET /alerts.json"
+    ]
+   },
+   "weatherbit": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "lat": "number",
+     "lon": "number",
+     "alerts": "array"
+    },
+    "evidence": [
+     "openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /alerts"
+    ]
+   },
+   "xweather": {
+    "segments": [
+     "alerts"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "success": "boolean",
+     "error": "object",
+     "id": "string",
+     "loc": "object",
+     "alerts": "array"
+    },
+    "evidence": [
+     "openapi/_original/xweather-weather-api-openapi.yml#GET /alerts/{location}"
+    ]
+   }
+  },
+  "air_quality": {
+   "2s-io": {
+    "segments": [
+     "air-quality"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "lat": "number",
+     "lon": "number",
+     "time": "string",
+     "usAqi": "number",
+     "usAqiCategory": "string",
+     "europeanAqi": "number",
+     "pm2_5": "number",
+     "pm10": "number",
+     "ozone": "number",
+     "nitrogenDioxide": "number",
+     "sulphurDioxide": "number",
+     "carbonMonoxide": "number"
+    },
+    "evidence": [
+     "openapi/_original/2s-io-openapi.json#GET /api/weather/air-quality"
+    ]
+   },
+   "accuweather": {
+    "segments": [
+     "airquality"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "category": "string",
+     "categoryColor": "string",
+     "date": "string",
+     "dayOfWeek": "string",
+     "dayOfWeekAbbreviated": "string",
+     "displayDate": "string",
+     "displayTime": "string",
+     "dominantPollutant": "string",
+     "hazardStatement": "string",
+     "overallIndex": "number",
+     "overallPlumeLabsIndex": "number",
+     "pollutants": "array"
+    },
+    "evidence": [
+     "openapi/_original/accuweather-openapi-original.yml#GET /api/airQuality/{locationKey}"
+    ]
+   },
+   "apifreaks-api-hub-for-developers": {
+    "segments": [
+     "air-quality"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "location": "object",
+     "current": "object",
+     "forecast": "object"
+    },
+    "evidence": [
+     "openapi/_original/apifreaks-api-hub-for-developers-air-quality-openapi.json#GET /air-quality"
+    ]
+   },
+   "apiverve": {
+    "segments": [
+     "airquality"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "string",
+     "error": "string",
+     "data": "object"
+    },
+    "evidence": [
+     "openapi/_original/apiverve-openapi.yaml#GET /v1/airquality"
+    ]
+   },
+   "atmospore-pollen-forecasts": {
+    "segments": [
+     "pollen"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "date": "string",
+     "overall_risk": "string",
+     "species": "object"
+    },
+    "evidence": [
+     "openapi/_original/atmospore-pollen-forecasts-openapi-original.json#GET /v1/pollen"
+    ]
+   },
+   "dynamicfeed-ai": {
+    "segments": [
+     "air-quality"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dynamicfeed-ai-openapi.json#GET /air-quality"
+    ]
+   },
+   "meteosource-air-quality-data-api": {
+    "segments": [
+     "air_quality"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "date": "string",
+     "aerosol_550": "number",
+     "air_quality": "number",
+     "co_surface": "number",
+     "dust_550nm": "number",
+     "dust_mixing_ratio_05": "number",
+     "no2_surface": "number",
+     "no_surface": "number",
+     "ozone_surface": "number",
+     "ozone_total": "number",
+     "pm10": "number",
+     "pm25": "number",
+     "so2_surface": "number"
+    },
+    "evidence": [
+     "openapi/_original/meteosource-air-quality-data-api-openapi.json#GET /air_quality"
+    ]
+   },
+   "open-meteo": {
+    "segments": [
+     "air-quality"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "latitude": "number",
+     "longitude": "number",
+     "elevation": "number",
+     "generationtime_ms": "number",
+     "utc_offset_seconds": "integer",
+     "timezone": "string",
+     "timezone_abbreviation": "string",
+     "hourly": "object",
+     "hourly_units": "object",
+     "current": "object",
+     "current_units": "object"
+    },
+    "evidence": [
+     "openapi/_original/open-meteo-air-quality-openapi.yml#GET /v1/air-quality"
+    ]
+   },
+   "openweather": {
+    "segments": [
+     "air_pollution"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "coord": "object",
+     "list": "array"
+    },
+    "evidence": [
+     "openapi/_original/openweather-openapi.yml#GET /air_pollution"
+    ]
+   },
+   "openweathermap": {
+    "segments": [
+     "air_pollution"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "coord": "object",
+     "list": "array"
+    },
+    "evidence": [
+     "openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution"
+    ]
+   },
+   "weatherbit": {
+    "segments": [
+     "airquality"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "city_name": "string",
+     "state_code": "string",
+     "country_code": "string",
+     "lat": "number",
+     "lon": "number",
+     "timezone": "string",
+     "data": "array"
+    },
+    "evidence": [
+     "openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /current/airquality",
+     "openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /forecast/airquality",
+     "openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /history/airquality"
+    ]
+   },
+   "xweather": {
+    "segments": [
+     "airquality"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "success": "boolean",
+     "error": "object",
+     "response": "object"
+    },
+    "evidence": [
+     "openapi/_original/xweather-weather-api-openapi.yml#GET /airquality/{location}"
+    ]
+   }
+  },
+  "station": {
+   "airvisual": {
+    "segments": [
+     "stations",
+     "station"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "station": "string",
+     "location": "object",
+     "name": "string",
+     "city": "string",
+     "state": "string",
+     "country": "string",
+     "current": "object",
+     "forecasts": "array",
+     "history": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#GET /station",
+     "openapi/_original/openapi.json#GET /stations"
+    ]
+   },
+   "dtn": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "tags": "object",
+     "parameters": "array",
+     "elevation": "number",
+     "isArchived": "boolean",
+     "lastObsTimestamp": "string",
+     "obsTypes": "array",
+     "archiveCounts": "object",
+     "geometry": "object",
+     "total": "integer",
+     "stations": "array"
+    },
+    "evidence": [
+     "openapi/_original/dtn-observation-api-openapi.json#GET /v2/observations/stations",
+     "openapi/_original/dtn-weather-conditions-openapi.yml#GET /stations"
+    ]
+   },
+   "dynamicfeed-ai": {
+    "segments": [
+     "station"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dynamicfeed-ai-openapi.json#GET /v1/station/{station_id}"
+    ]
+   },
+   "here": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "hasMore": "boolean",
+     "fuelStations": "object",
+     "total": "integer",
+     "limit": "integer",
+     "count": "integer",
+     "nextOffset": "integer",
+     "stations": "array",
+     "corridor": "array",
+     "width": "integer",
+     "id": "string",
+     "modified": "string",
+     "timeZone": "string",
+     "name": "string",
+     "brand": "string",
+     "brandIcon": "string",
+     "distance": "integer",
+     "open24x7": "boolean",
+     "address": "object",
+     "contacts": "object",
+     "position": null,
+     "access": null,
+     "prices": "array",
+     "stationDetails": "object",
+     "notices": "array"
+    },
+    "evidence": [
+     "openapi/_original/here-fuel-prices-v2-openapi.yml#GET /fuel/stations",
+     "openapi/_original/here-fuel-prices-v2-openapi.yml#GET /fuel/stations/{id}",
+     "openapi/_original/here-fuel-prices-v2-openapi_2.yml#GET /fuel/stations",
+     "openapi/_original/here-fuel-prices-v2-openapi_2.yml#GET /fuel/stations/{id}",
+     "openapi/_original/here-fuel-prices-v3-openapi.yml#GET /stations",
+     "openapi/_original/here-fuel-prices-v3-openapi.yml#GET /stations/bulk",
+     "openapi/_original/here-fuel-prices-v3-openapi.yml#GET /stations/{id}",
+     "openapi/_original/here-fuel-prices-v3-openapi.yml#POST /stations",
+     "openapi/_original/here-fuel-prices-v3-openapi_2.yml#GET /stations",
+     "openapi/_original/here-fuel-prices-v3-openapi_2.yml#GET /stations/bulk",
+     "openapi/_original/here-fuel-prices-v3-openapi_2.yml#GET /stations/{id}",
+     "openapi/_original/here-fuel-prices-v3-openapi_2.yml#POST /stations"
+    ]
+   },
+   "national-weather-service": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "stationIdentifier": "string",
+     "name": "string",
+     "timeZone": "string",
+     "provider": "string",
+     "subProvider": "string",
+     "forecast": "string",
+     "county": "string",
+     "fireWeatherZone": "string",
+     "distance": "object",
+     "bearing": "object"
+    },
+    "evidence": [
+     "openapi/_original/national-weather-service-openapi.json#GET /gridpoints/{wfo}/{x},{y}/stations",
+     "openapi/_original/national-weather-service-openapi.json#GET /points/{latitude},{longitude}/stations",
+     "openapi/_original/national-weather-service-openapi.json#GET /radar/stations",
+     "openapi/_original/national-weather-service-openapi.json#GET /radar/stations/{stationId}",
+     "openapi/_original/national-weather-service-openapi.json#GET /stations",
+     "openapi/_original/national-weather-service-openapi.json#GET /stations/{stationId}",
+     "openapi/_original/national-weather-service-openapi.json#GET /zones/forecast/{zoneId}/stations"
+    ]
+   },
+   "noaa": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": "string",
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "stationIdentifier": "string",
+     "name": "string",
+     "timeZone": "string",
+     "provider": "string",
+     "subProvider": "string",
+     "forecast": "string",
+     "county": "string",
+     "fireWeatherZone": "string",
+     "distance": "object",
+     "bearing": "object"
+    },
+    "evidence": [
+     "openapi/_original/noaa-nws-openapi.yml#GET /gridpoints/{wfo}/{x},{y}/stations",
+     "openapi/_original/noaa-nws-openapi.yml#GET /points/{latitude},{longitude}/stations",
+     "openapi/_original/noaa-nws-openapi.yml#GET /radar/stations",
+     "openapi/_original/noaa-nws-openapi.yml#GET /radar/stations/{stationId}",
+     "openapi/_original/noaa-nws-openapi.yml#GET /stations",
+     "openapi/_original/noaa-nws-openapi.yml#GET /stations/{stationId}",
+     "openapi/_original/noaa-nws-openapi.yml#GET /zones/forecast/{zoneId}/stations"
+    ]
+   },
+   "noaa-co-ops": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "count": "integer",
+     "stations": "array",
+     "id": "string",
+     "name": "string",
+     "lat": "number",
+     "lng": "number",
+     "affiliation": "string",
+     "portscode": "string",
+     "products": "object",
+     "disclaimers": "array",
+     "notices": "array",
+     "self": "string"
+    },
+    "evidence": [
+     "openapi/_original/metadata-api.json#GET /stations.json",
+     "openapi/_original/metadata-api.json#GET /stations/{stationId}.json"
+    ]
+   },
+   "noaa-gov": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "stationIdentifier": "string",
+     "name": "string",
+     "timeZone": "string",
+     "provider": "string",
+     "subProvider": "string",
+     "forecast": "string",
+     "county": "string",
+     "fireWeatherZone": "string",
+     "distance": "object",
+     "bearing": "object"
+    },
+    "evidence": [
+     "openapi/_original/weather-gov-api-openapi.json#GET /gridpoints/{wfo}/{x},{y}/stations",
+     "openapi/_original/weather-gov-api-openapi.json#GET /points/{latitude},{longitude}/stations",
+     "openapi/_original/weather-gov-api-openapi.json#GET /radar/stations",
+     "openapi/_original/weather-gov-api-openapi.json#GET /radar/stations/{stationId}",
+     "openapi/_original/weather-gov-api-openapi.json#GET /stations",
+     "openapi/_original/weather-gov-api-openapi.json#GET /stations/{stationId}",
+     "openapi/_original/weather-gov-api-openapi.json#GET /zones/forecast/{zoneId}/stations"
+    ]
+   },
+   "openweathermap": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "external_id": "string",
+     "name": "string",
+     "latitude": "number",
+     "longitude": "number",
+     "altitude": "number",
+     "id": "string",
+     "updated_at": "string",
+     "created_at": "string",
+     "rank": "integer"
+    },
+    "evidence": [
+     "openapi/_original/openweathermap-weather-stations-openapi.yml#DELETE /stations/{station_id}",
+     "openapi/_original/openweathermap-weather-stations-openapi.yml#GET /stations",
+     "openapi/_original/openweathermap-weather-stations-openapi.yml#GET /stations/{station_id}",
+     "openapi/_original/openweathermap-weather-stations-openapi.yml#POST /stations",
+     "openapi/_original/openweathermap-weather-stations-openapi.yml#PUT /stations/{station_id}"
+    ]
+   },
+   "sinay": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "area": "object",
+     "time": "object",
+     "model": "object"
+    },
+    "evidence": [
+     "openapi/_original/sinay-openapi.yml#POST /metocean/api/v1/stations"
+    ]
+   },
+   "stormglass": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "lat": "number",
+     "lng": "number",
+     "name": "string",
+     "source": "string"
+    },
+    "evidence": [
+     "openapi/_original/stormglass-openapi.yml#GET /tide/stations"
+    ]
+   },
+   "weather-gov": {
+    "segments": [
+     "stations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "@context": null,
+     "id": "string",
+     "type": "string",
+     "geometry": [
+      "string",
+      "null"
+     ],
+     "properties": "object",
+     "@id": "string",
+     "@type": "string",
+     "elevation": "object",
+     "stationIdentifier": "string",
+     "name": "string",
+     "timeZone": "string",
+     "provider": "string",
+     "subProvider": "string",
+     "forecast": "string",
+     "county": "string",
+     "fireWeatherZone": "string",
+     "distance": "object",
+     "bearing": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /gridpoints/{wfo}/{x},{y}/stations",
+     "openapi/_original/openapi.yml#GET /points/{latitude},{longitude}/stations",
+     "openapi/_original/openapi.yml#GET /radar/stations",
+     "openapi/_original/openapi.yml#GET /radar/stations/{stationId}",
+     "openapi/_original/openapi.yml#GET /stations",
+     "openapi/_original/openapi.yml#GET /stations/{stationId}",
+     "openapi/_original/openapi.yml#GET /zones/forecast/{zoneId}/stations"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "2s-io",
+    "accuweather",
+    "agrology",
+    "airvisual",
+    "ambee",
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "atmospore-pollen-forecasts",
+    "aviationweather",
+    "climateai",
+    "cracked",
+    "danish-meteorological-institutes",
+    "dark-sky",
+    "dtn",
+    "dynamicfeed-ai",
+    "ecmwf",
+    "energy-utilities",
+    "eumetsat",
+    "farmers-edge",
+    "here",
+    "leaf-agriculture",
+    "met-office",
+    "meteomatics",
+    "meteosource-air-quality-data-api",
+    "mixerbox",
+    "national-oceanic-and-atmospheric-administration",
+    "national-weather-service",
+    "noaa",
+    "noaa-co-ops",
+    "noaa-erddap",
+    "noaa-gov",
+    "open-meteo",
+    "openuv",
+    "openweather",
+    "openweathermap",
+    "rainbow-ai",
+    "revolutio",
+    "sinay",
+    "skymerse",
+    "solcast",
+    "southendonsea",
+    "stormglass",
+    "sunrise-sunset",
+    "tomorrow-io",
+    "waqi",
+    "weather-gov",
+    "weatherapi",
+    "weatherbit",
+    "windy",
+    "wmo",
+    "wunderground",
+    "xweather",
+    "yr-no"
+   ],
+   "kebab-case": [
+    "2s-io",
+    "accuweather",
+    "agrology",
+    "ambee",
+    "apifreaks-api-hub-for-developers",
+    "atmospore-pollen-forecasts",
+    "climateai",
+    "dtn",
+    "dynamicfeed-ai",
+    "ecmwf",
+    "energy-utilities",
+    "eumetsat",
+    "farmers-edge",
+    "here",
+    "leaf-agriculture",
+    "met-office",
+    "open-meteo",
+    "sinay",
+    "skymerse",
+    "southendonsea",
+    "stormglass",
+    "windy",
+    "wmo"
+   ],
+   "snake_case": [
+    "airvisual",
+    "climateai",
+    "dtn",
+    "eumetsat",
+    "meteomatics",
+    "meteosource-air-quality-data-api",
+    "mixerbox",
+    "noaa-co-ops",
+    "openweather",
+    "openweathermap",
+    "solcast",
+    "yr-no"
+   ],
+   "other": [
+    "ambee",
+    "dtn",
+    "ecmwf",
+    "eumetsat",
+    "here",
+    "mixerbox",
+    "noaa-erddap",
+    "openweathermap",
+    "southendonsea",
+    "waqi",
+    "weatherapi",
+    "wunderground"
+   ],
+   "camelCase": [
+    "accuweather",
+    "danish-meteorological-institutes",
+    "dtn",
+    "eumetsat",
+    "here",
+    "leaf-agriculture",
+    "mixerbox"
+   ],
+   "PascalCase": [
+    "dtn",
+    "leaf-agriculture",
+    "shipfinder-ais-data-api"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "2s-io",
+    "accuweather",
+    "agrology",
+    "airvisual",
+    "ambee",
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "atmospore-pollen-forecasts",
+    "aviationweather",
+    "climateai",
+    "cracked",
+    "danish-meteorological-institutes",
+    "dark-sky",
+    "dtn",
+    "dynamicfeed-ai",
+    "ecmwf",
+    "energy-utilities",
+    "eumetsat",
+    "farmers-edge",
+    "here",
+    "leaf-agriculture",
+    "met-office",
+    "meteomatics",
+    "meteosource-air-quality-data-api",
+    "mixerbox",
+    "national-oceanic-and-atmospheric-administration",
+    "national-weather-service",
+    "noaa",
+    "noaa-co-ops",
+    "noaa-erddap",
+    "noaa-gov",
+    "open-meteo",
+    "openuv",
+    "openweather",
+    "openweathermap",
+    "rainbow-ai",
+    "revolutio",
+    "shipfinder-ais-data-api",
+    "skymerse",
+    "solcast",
+    "stormglass",
+    "sunrise-sunset",
+    "tomorrow-io",
+    "waqi",
+    "weather-gov",
+    "weatherapi",
+    "weatherbit",
+    "windy",
+    "wmo",
+    "wunderground",
+    "xweather",
+    "yr-no"
+   ],
+   "snake_case": [
+    "2s-io",
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "atmospore-pollen-forecasts",
+    "climateai",
+    "dtn",
+    "dynamicfeed-ai",
+    "ecmwf",
+    "eumetsat",
+    "here",
+    "meteomatics",
+    "meteosource-air-quality-data-api",
+    "mixerbox",
+    "national-oceanic-and-atmospheric-administration",
+    "national-weather-service",
+    "noaa",
+    "noaa-co-ops",
+    "noaa-erddap",
+    "noaa-gov",
+    "open-meteo",
+    "openweathermap",
+    "shipfinder-ais-data-api",
+    "skymerse",
+    "solcast",
+    "weather-gov",
+    "weatherapi",
+    "weatherbit",
+    "xweather"
+   ],
+   "camelCase": [
+    "2s-io",
+    "accuweather",
+    "ambee",
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "aviationweather",
+    "danish-meteorological-institutes",
+    "dtn",
+    "ecmwf",
+    "eumetsat",
+    "here",
+    "leaf-agriculture",
+    "met-office",
+    "mixerbox",
+    "national-weather-service",
+    "noaa",
+    "noaa-co-ops",
+    "noaa-erddap",
+    "noaa-gov",
+    "revolutio",
+    "sinay",
+    "tomorrow-io",
+    "weather-gov",
+    "wmo",
+    "wunderground",
+    "yr-no"
+   ],
+   "other": [
+    "2s-io",
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "here",
+    "noaa-erddap",
+    "wmo"
+   ],
+   "kebab-case": [
+    "apifreaks-api-hub-for-developers",
+    "dtn",
+    "farmers-edge",
+    "met-office",
+    "wmo"
+   ],
+   "PascalCase": [
+    "accuweather"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "2s-io",
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "cracked",
+    "danish-meteorological-institutes",
+    "dtn",
+    "dynamicfeed-ai",
+    "ecmwf",
+    "energy-utilities",
+    "eumetsat",
+    "here",
+    "mixerbox",
+    "national-weather-service",
+    "noaa",
+    "noaa-gov",
+    "openweathermap",
+    "weather-gov",
+    "windy",
+    "wmo",
+    "xweather"
+   ],
+   "start": [
+    "2s-io",
+    "apiverve",
+    "energy-utilities",
+    "here",
+    "national-weather-service",
+    "noaa",
+    "noaa-gov",
+    "openweather",
+    "openweathermap",
+    "solcast",
+    "stormglass",
+    "weather-gov"
+   ],
+   "page": [
+    "2s-io",
+    "accuweather",
+    "apifreaks-api-hub-for-developers",
+    "dtn",
+    "ecmwf",
+    "energy-utilities",
+    "eumetsat",
+    "here",
+    "leaf-agriculture",
+    "noaa-erddap",
+    "skymerse"
+   ],
+   "size": [
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "dtn",
+    "eumetsat",
+    "here",
+    "leaf-agriculture",
+    "national-weather-service",
+    "noaa",
+    "noaa-gov",
+    "weather-gov"
+   ],
+   "offset": [
+    "2s-io",
+    "dtn",
+    "eumetsat",
+    "here",
+    "windy",
+    "wmo",
+    "yr-no"
+   ],
+   "count": [
+    "2s-io",
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "dynamicfeed-ai",
+    "here",
+    "mixerbox"
+   ],
+   "cursor": [
+    "2s-io",
+    "cracked",
+    "national-weather-service",
+    "noaa",
+    "noaa-gov",
+    "weather-gov"
+   ],
+   "page_token": [
+    "2s-io",
+    "dtn",
+    "here",
+    "mixerbox"
+   ],
+   "before": [
+    "apifreaks-api-hub-for-developers",
+    "dynamicfeed-ai",
+    "here"
+   ],
+   "page_size": [
+    "2s-io",
+    "dtn"
+   ],
+   "per_page": [
+    "2s-io",
+    "skymerse"
+   ],
+   "max_results": [
+    "2s-io",
+    "leaf-agriculture"
+   ],
+   "after": [
+    "apifreaks-api-hub-for-developers",
+    "here"
+   ],
+   "skip": [
+    "2s-io"
+   ]
+  },
+  "property": {
+   "lower": [
+    "2s-io",
+    "accuweather",
+    "airvisual",
+    "apifreaks-api-hub-for-developers",
+    "apiverve",
+    "atmospore-pollen-forecasts",
+    "climateai",
+    "dtn",
+    "here",
+    "meteosource-air-quality-data-api",
+    "national-weather-service",
+    "noaa",
+    "noaa-co-ops",
+    "noaa-gov",
+    "open-meteo",
+    "openuv",
+    "openweather",
+    "openweathermap",
+    "sinay",
+    "southendonsea",
+    "stormglass",
+    "tomorrow-io",
+    "weather-gov",
+    "weatherapi",
+    "weatherbit",
+    "wunderground",
+    "xweather",
+    "yr-no"
+   ],
+   "camelCase": [
+    "2s-io",
+    "accuweather",
+    "apifreaks-api-hub-for-developers",
+    "dtn",
+    "here",
+    "national-weather-service",
+    "noaa",
+    "noaa-gov",
+    "tomorrow-io",
+    "weather-gov",
+    "wunderground",
+    "yr-no"
+   ],
+   "snake_case": [
+    "2s-io",
+    "apifreaks-api-hub-for-developers",
+    "atmospore-pollen-forecasts",
+    "climateai",
+    "meteosource-air-quality-data-api",
+    "open-meteo",
+    "openuv",
+    "openweather",
+    "openweathermap",
+    "weatherbit",
+    "wunderground",
+    "yr-no"
+   ],
+   "other": [
+    "national-weather-service",
+    "noaa",
+    "noaa-gov",
+    "weather-gov"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "accuweather",
+    "agrology",
+    "climateai",
+    "cracked",
+    "dark-sky",
+    "dtn",
+    "dynamicfeed-ai",
+    "ecmwf",
+    "energy-utilities",
+    "eumetsat",
+    "farmers-edge",
+    "here",
+    "met-office",
+    "meteomatics",
+    "national-weather-service",
+    "noaa",
+    "noaa-co-ops",
+    "noaa-erddap",
+    "noaa-gov",
+    "openweathermap",
+    "rainbow-ai",
+    "skymerse",
+    "tomorrow-io",
+    "waqi",
+    "weather-gov",
+    "xweather"
+   ],
+   "camelCase": [
+    "accuweather",
+    "agrology",
+    "dtn",
+    "eumetsat",
+    "here",
+    "leaf-agriculture",
+    "met-office",
+    "national-weather-service",
+    "noaa",
+    "noaa-co-ops",
+    "noaa-erddap",
+    "noaa-gov",
+    "sinay",
+    "tomorrow-io",
+    "weather-gov",
+    "windy",
+    "wmo"
+   ],
+   "other": [
+    "dark-sky",
+    "dtn",
+    "eumetsat",
+    "leaf-agriculture",
+    "national-weather-service",
+    "noaa",
+    "noaa-erddap",
+    "noaa-gov",
+    "weather-gov"
+   ],
+   "snake_case": [
+    "climateai",
+    "dtn",
+    "dynamicfeed-ai",
+    "ecmwf",
+    "met-office",
+    "openweathermap"
+   ],
+   "kebab-case": [
+    "dtn"
+   ]
+  }
+ }
+}

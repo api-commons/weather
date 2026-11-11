@@ -1,0 +1,24 @@
+provider: tomorrow-io
+apis_io: https://apis.io/providers/tomorrow-io/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - realtime
+    properties:
+      time: time
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tomorrow-io-weather-api-openapi.yml#GET /weather/realtime
+  forecast:
+    path_segment:
+    - timelines
+    - forecast
+    properties:
+      units: units
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tomorrow-io-weather-api-openapi.yml#GET /timelines
+    - openapi/_original/tomorrow-io-weather-api-openapi.yml#GET /weather/forecast
+    - openapi/_original/tomorrow-io-weather-api-openapi.yml#POST /timelines

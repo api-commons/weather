@@ -1,0 +1,28 @@
+provider: accuweather
+apis_io: https://apis.io/providers/accuweather/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    - current-conditions
+    properties:
+      condition:
+      - icon
+      - conditions
+      id: id
+      temperature: temperature
+      feels_like: realFeel
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/accuweather-openapi-original.yml#GET /api/current-conditions/{locationKey}
+    - openapi/_original/accuweather-openapi-original.yml#GET /api/current/{locationKey}
+  air_quality:
+    path_segment:
+    - airquality
+    properties:
+      time: date
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/accuweather-openapi-original.yml#GET /api/airQuality/{locationKey}

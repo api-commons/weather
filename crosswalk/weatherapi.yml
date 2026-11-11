@@ -1,0 +1,34 @@
+provider: weatherapi
+apis_io: https://apis.io/providers/weatherapi/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weatherapi-openapi-original.yml#GET /current.json
+  forecast:
+    path_segment:
+    - forecast
+    properties:
+      current: current
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weatherapi-openapi-original.yml#GET /forecast.json
+  historical_weather:
+    path_segment:
+    - history
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weatherapi-openapi-original.yml#GET /history.json
+  weather_alert:
+    path_segment:
+    - alerts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weatherapi-openapi-original.yml#GET /alerts.json

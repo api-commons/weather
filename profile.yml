@@ -1,0 +1,557 @@
+context: weather
+name: Weather
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Weather
+  - Meteorology
+  - Weather Data
+  - Weather API
+  - Weather Forecasting
+  providers_with_harvested_openapi: 54
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded: {}
+duplicates:
+  national-weather-service:
+  - noaa
+  - noaa-gov
+  - weather-gov
+  openweathermap:
+  - openweather
+shared_specs: {}
+concepts:
+  current_conditions:
+    segments_seen:
+      current: 10
+      now: 1
+      current-conditions: 1
+      latest: 1
+      realtime: 1
+    providers_exposing: 12
+    providers_with_readable_schema: 11
+    operations:
+    - operation: GET collection
+      providers: 11
+      share: 0.917
+      tier: core
+    - operation: GET item
+      providers: 1
+      share: 0.083
+      tier: long-tail
+    - operation: POST collection
+      providers: 1
+      share: 0.083
+      tier: long-tail
+    properties:
+    - name: condition
+      tier: extended
+      providers: 5
+      share: 0.455
+      type: string
+      spellings:
+      - conditions
+      - icon
+      - summary
+      - weatherCode
+      - weather
+      - description
+    - name: id
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: string
+      spellings:
+      - id
+      - '@id'
+      - stationId
+      - stationID
+    - name: temperature
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: number
+      spellings:
+      - temperature
+      - temp
+    - name: time
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: string
+      spellings:
+      - time
+      - timestamp
+      - datetime
+    - name: feels_like
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: object
+      spellings:
+      - apparentTemperature
+      - realFeel
+      - windChill
+      - heatIndex
+    - name: humidity
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: integer
+      spellings:
+      - relativeHumidity
+      - rh
+      - humidity
+    - name: station
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - station
+    - name: wind_speed
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: number
+      spellings:
+      - windSpeed
+      - wind_speed
+    long_tail_count: 118
+    long_tail_sample:
+    - dew_point
+    - geometry
+    - precipitation
+    - uv_index
+    - visibility
+    - wind_direction
+    - app_temp
+    - apparent_temp_imperial
+    - aqi
+    - awareness_level
+    - barometric_pressure
+    - bulk
+    - certainty
+    - city_name
+    - cloud_cover
+    - cloud_cover_pct
+    - cloud_layers
+    - color
+    - context
+    - country
+    - country_code
+    - county
+    - dhi
+    - display_high_temperature
+    - display_low_temperature
+    - display_name
+    - display_real_feel
+    - display_real_feel_shade
+    - display_temperature
+    - dni
+    - earthquakes
+    - elev_angle
+    - elevation
+    - epoch
+    - event
+    - event_awareness_name
+    - expires
+    - extended
+    - generated_at
+    - geographic_domain
+  forecast:
+    segments_seen:
+      forecast: 11
+      hourly: 5
+      daily: 4
+      forecasts: 2
+      onecall: 1
+      timelines: 1
+    providers_exposing: 14
+    providers_with_readable_schema: 12
+    operations:
+    - operation: GET collection
+      providers: 13
+      share: 0.929
+      tier: core
+    - operation: GET item
+      providers: 2
+      share: 0.143
+      tier: long-tail
+    - operation: POST collection
+      providers: 1
+      share: 0.071
+      tier: long-tail
+    properties:
+    - name: current
+      tier: extended
+      providers: 3
+      share: 0.25
+      type: object
+      spellings:
+      - current
+    - name: units
+      tier: extended
+      providers: 3
+      share: 0.25
+      type: string
+      spellings:
+      - units
+    long_tail_count: 639
+    long_tail_sample:
+    - alerts
+    - daily
+    - elevation
+    - end_time
+    - generated_at
+    - geometry
+    - hourly
+    - time
+    - air_temp
+    - city
+    - city_name
+    - cnt
+    - cod
+    - context
+    - coord
+    - country_code
+    - created_at
+    - current_units
+    - daily_units
+    - detailed_forecast
+    - diffuse_horizontal_irradiance
+    - direct_normal_irradiance
+    - error
+    - fields
+    - forecast_generator
+    - generationtime_ms
+    - granularity
+    - hourly_units
+    - id
+    - init_time
+    - intervals
+    - is_daytime
+    - kind
+    - list
+    - minutely
+    - minutely_15
+    - minutely_15_units
+    - name
+    - periods
+    - precip_probability_pct
+  historical_weather:
+    segments_seen:
+      history: 7
+      historical: 2
+      observations: 1
+      timemachine: 1
+    providers_exposing: 9
+    providers_with_readable_schema: 7
+    operations:
+    - operation: GET collection
+      providers: 9
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    properties:
+    - name: time
+      tier: core
+      providers: 4
+      share: 0.571
+      type: string
+      spellings:
+      - date
+      - timestamp
+    long_tail_count: 53
+    long_tail_sample:
+    - id
+    - type
+    - alerts
+    - attributes
+    - barometric_pressure
+    - base
+    - cloud_layers
+    - condition
+    - context
+    - coord
+    - created_at
+    - current
+    - dates
+    - dewpoint
+    - elevation
+    - feels_like
+    - forecast
+    - geometry
+    - granularity
+    - historical_dns_records
+    - humidity
+    - kind
+    - list
+    - max_temperature_last24_hours
+    - min_temperature_last24_hours
+    - name
+    - precip_hours
+    - precipitation
+    - precipitation_last3_hours
+    - precipitation_last6_hours
+    - precipitation_last_hour
+    - present_weather
+    - pressure
+    - properties
+    - rates
+    - raw_message
+    - station
+    - station_name
+    - status
+    - temp_max_c
+  weather_alert:
+    segments_seen:
+      alerts: 8
+      alert: 1
+    providers_exposing: 9
+    providers_with_readable_schema: 7
+    operations:
+    - operation: GET collection
+      providers: 6
+      share: 0.667
+      tier: core
+    - operation: GET item
+      providers: 3
+      share: 0.333
+      tier: extended
+    - operation: POST collection
+      providers: 2
+      share: 0.222
+      tier: long-tail
+    properties:
+    - name: geometry
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: object
+      spellings:
+      - geometry
+    - name: id
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - id
+    - name: status
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - status
+    long_tail_count: 39
+    long_tail_sample:
+    - category
+    - certainty
+    - code
+    - condition
+    - created_at
+    - ends
+    - ends_at
+    - event
+    - instruction
+    - message_type
+    - note
+    - references
+    - response
+    - scope
+    - sender
+    - sender_name
+    - severity
+    - starts_at
+    - updated_at
+    - addresses
+    - area
+    - area_description
+    - context
+    - error
+    - event_code
+    - geocode
+    - identifier
+    - info
+    - language
+    - loc
+    - msg_type
+    - pagination
+    - parameters
+    - properties
+    - restriction
+    - route
+    - source
+    - web
+    - width
+  air_quality:
+    segments_seen:
+      air-quality: 4
+      airquality: 4
+      pollen: 1
+      air_quality: 1
+      air_pollution: 1
+    providers_exposing: 11
+    providers_with_readable_schema: 10
+    operations:
+    - operation: GET collection
+      providers: 9
+      share: 0.818
+      tier: core
+    - operation: GET item
+      providers: 2
+      share: 0.182
+      tier: long-tail
+    properties:
+    - name: time
+      tier: extended
+      providers: 4
+      share: 0.4
+      type: string
+      spellings:
+      - date
+      - time
+    long_tail_count: 47
+    long_tail_sample:
+    - current
+    - error
+    - pm10
+    - pm25
+    - aerosol_550
+    - aqi
+    - carbon_monoxide
+    - category
+    - category_color
+    - city_name
+    - co_surface
+    - coord
+    - country_code
+    - current_units
+    - day_of_week
+    - day_of_week_abbreviated
+    - display_date
+    - display_time
+    - dominant_pollutant
+    - dust_550nm
+    - dust_mixing_ratio_05
+    - elevation
+    - forecast
+    - generationtime_ms
+    - hazard_statement
+    - hourly
+    - hourly_units
+    - list
+    - no2
+    - no2_surface
+    - no_surface
+    - overall_index
+    - overall_plume_labs_index
+    - overall_risk
+    - ozone
+    - ozone_surface
+    - ozone_total
+    - pollutants
+    - response
+    - so2_surface
+  station:
+    segments_seen:
+      stations: 8
+      station: 2
+    providers_exposing: 9
+    providers_with_readable_schema: 8
+    operations:
+    - operation: GET collection
+      providers: 7
+      share: 0.778
+      tier: core
+    - operation: GET item
+      providers: 5
+      share: 0.556
+      tier: core
+    - operation: POST collection
+      providers: 3
+      share: 0.333
+      tier: extended
+    - operation: DELETE item
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 6
+      share: 0.75
+      type: string
+      spellings:
+      - name
+    - name: id
+      tier: core
+      providers: 4
+      share: 0.5
+      type: string
+      spellings:
+      - id
+      - '@id'
+    - name: elevation
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: number
+      spellings:
+      - elevation
+      - altitude
+    long_tail_count: 54
+    long_tail_sample:
+    - distance
+    - geometry
+    - longitude
+    - notices
+    - time_zone
+    - updated_at
+    - access
+    - address
+    - affiliation
+    - archive_counts
+    - area
+    - bearing
+    - brand
+    - brand_icon
+    - city
+    - contacts
+    - context
+    - corridor
+    - country
+    - county
+    - created_at
+    - current
+    - disclaimers
+    - external_id
+    - fire_weather_zone
+    - forecast
+    - forecasts
+    - fuel_stations
+    - history
+    - is_archived
+    - last_obs_timestamp
+    - limit
+    - model
+    - next_offset
+    - obs_types
+    - open24x7
+    - parameters
+    - portscode
+    - position
+    - prices

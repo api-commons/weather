@@ -1,0 +1,13 @@
+provider: stormglass
+apis_io: https://apis.io/providers/stormglass/
+context: weather
+generated: '2026-11-10'
+concepts:
+  station:
+    path_segment:
+    - stations
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/stormglass-openapi.yml#GET /tide/stations

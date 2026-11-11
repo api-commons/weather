@@ -1,0 +1,13 @@
+provider: meteosource-air-quality-data-api
+apis_io: https://apis.io/providers/meteosource-air-quality-data-api/
+context: weather
+generated: '2026-11-10'
+concepts:
+  air_quality:
+    path_segment:
+    - air_quality
+    properties:
+      time: date
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/meteosource-air-quality-data-api-openapi.json#GET /air_quality

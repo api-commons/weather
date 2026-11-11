@@ -1,0 +1,14 @@
+provider: yr-no
+apis_io: https://apis.io/providers/yr-no/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    properties:
+      condition: description
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/yr-no-metalerts-openapi.yml#GET /current

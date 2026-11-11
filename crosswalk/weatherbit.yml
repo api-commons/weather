@@ -1,0 +1,43 @@
+provider: weatherbit
+apis_io: https://apis.io/providers/weatherbit/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    properties:
+      condition: weather
+      temperature: temp
+      time: datetime
+      humidity: rh
+      station: station
+      wind_speed: wind_speed
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /current
+  forecast:
+    path_segment:
+    - daily
+    - hourly
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /forecast/daily
+    - openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /forecast/hourly
+  weather_alert:
+    path_segment:
+    - alerts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /alerts
+  air_quality:
+    path_segment:
+    - airquality
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /current/airquality
+    - openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /forecast/airquality
+    - openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /history/airquality

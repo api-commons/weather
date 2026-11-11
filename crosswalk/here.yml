@@ -1,0 +1,30 @@
+provider: here
+apis_io: https://apis.io/providers/here/
+context: weather
+generated: '2026-11-10'
+concepts:
+  weather_alert:
+    path_segment:
+    - alerts
+    properties:
+      geometry: geometry
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/here-destination-weather-v1-openapi.yml#GET /weather/2.0/alerts
+    - openapi/_original/here-destination-weather-v1-openapi.yml#POST /weather/2.0/alerts
+    - openapi/_original/here-destination-weather-v1-openapi_2.yml#GET /weather/2.0/alerts
+    - openapi/_original/here-destination-weather-v1-openapi_2.yml#POST /weather/2.0/alerts
+    - openapi/_original/here-destination-weather-v3-openapi.yml#POST /alerts
+  station:
+    path_segment:
+    - stations
+    properties:
+      name: name
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/here-fuel-prices-v2-openapi.yml#GET /fuel/stations
+    - openapi/_original/here-fuel-prices-v2-openapi.yml#GET /fuel/stations/{id}
+    - openapi/_original/here-fuel-prices-v2-openapi_2.yml#GET /fuel/stations
+    - openapi/_original/here-fuel-prices-v2-openapi_2.yml#GET /fuel/stations/{id}
+    - openapi/_original/here-fuel-prices-v3-openapi.yml#GET /stations

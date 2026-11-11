@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/weather/main/schema/historical_weather.json",
+  "title": "Historical Weather",
+  "description": "The common historical_weather in Weather, distilled from 7 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "time": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.571,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "date",
+        "timestamp"
+      ]
+    }
+  },
+  "required": [],
+  "x-commons": {
+    "context": "weather",
+    "concept": "historical_weather",
+    "providers": 7,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

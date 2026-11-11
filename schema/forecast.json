@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/weather/main/schema/forecast.json",
+  "title": "Forecast",
+  "description": "The common forecast in Weather, distilled from 12 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "current": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "current"
+      ]
+    },
+    "units": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "units"
+      ]
+    }
+  },
+  "required": [],
+  "x-commons": {
+    "context": "weather",
+    "concept": "forecast",
+    "providers": 12,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

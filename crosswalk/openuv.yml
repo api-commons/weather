@@ -1,0 +1,12 @@
+provider: openuv
+apis_io: https://apis.io/providers/openuv/
+context: weather
+generated: '2026-11-10'
+concepts:
+  forecast:
+    path_segment:
+    - forecast
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openuv-openapi.yml#GET /forecast

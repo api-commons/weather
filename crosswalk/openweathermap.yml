@@ -1,0 +1,66 @@
+provider: openweathermap
+apis_io: https://apis.io/providers/openweathermap/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openweathermap-one-call-openapi.yml#GET /current
+  forecast:
+    path_segment:
+    - onecall
+    - forecast
+    - hourly
+    - daily
+    properties:
+      current: current
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openweather-openapi.yml#GET /air_pollution/forecast
+    - openapi/_original/openweather-openapi.yml#GET /onecall
+    - openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution/forecast
+    - openapi/_original/openweathermap-forecast-openapi.yml#GET /forecast
+    - openapi/_original/openweathermap-forecast-openapi.yml#GET /forecast/daily
+  historical_weather:
+    path_segment:
+    - timemachine
+    - history
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openweather-openapi.yml#GET /air_pollution/history
+    - openapi/_original/openweather-openapi.yml#GET /onecall/timemachine
+    - openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution/history
+  weather_alert:
+    path_segment:
+    - alert
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/openweathermap-one-call-openapi.yml#GET /alert/{alert_id}
+  air_quality:
+    path_segment:
+    - air_pollution
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openweather-openapi.yml#GET /air_pollution
+    - openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution
+  station:
+    path_segment:
+    - stations
+    properties:
+      name: name
+      id: id
+      elevation: altitude
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openweathermap-weather-stations-openapi.yml#DELETE /stations/{station_id}
+    - openapi/_original/openweathermap-weather-stations-openapi.yml#GET /stations
+    - openapi/_original/openweathermap-weather-stations-openapi.yml#GET /stations/{station_id}
+    - openapi/_original/openweathermap-weather-stations-openapi.yml#POST /stations
+    - openapi/_original/openweathermap-weather-stations-openapi.yml#PUT /stations/{station_id}

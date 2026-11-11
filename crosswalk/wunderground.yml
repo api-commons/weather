@@ -1,0 +1,14 @@
+provider: wunderground
+apis_io: https://apis.io/providers/wunderground/
+context: weather
+generated: '2026-11-10'
+concepts:
+  current_conditions:
+    path_segment:
+    - current
+    properties:
+      id: stationID
+      humidity: humidity
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/wunderground-pws-api.yml#GET /v2/pws/observations/current

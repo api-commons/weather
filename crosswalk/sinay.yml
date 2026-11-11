@@ -1,0 +1,12 @@
+provider: sinay
+apis_io: https://apis.io/providers/sinay/
+context: weather
+generated: '2026-11-10'
+concepts:
+  station:
+    path_segment:
+    - stations
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sinay-openapi.yml#POST /metocean/api/v1/stations

@@ -1,0 +1,268 @@
+openapi: 3.1.0
+info:
+  title: Weather (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Weather interface, distilled from the harvested OpenAPI of 54 providers in the APIs.io
+    catalog. Not a product: no one serves this API. It is the shape the market already shares, measured, so that
+    providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /current:
+    get:
+      operationId: listCurrentConditionses
+      summary: List current
+      tags:
+      - Current Conditionses
+      x-commons-tier: core
+      x-commons-share: 0.917
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CurrentConditions'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /forecasts:
+    get:
+      operationId: listForecasts
+      summary: List forecasts
+      tags:
+      - Forecasts
+      x-commons-tier: core
+      x-commons-share: 0.929
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Forecast'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /history:
+    get:
+      operationId: listHistoricalWeathers
+      summary: List history
+      tags:
+      - Historical Weathers
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/HistoricalWeather'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /weather-alerts:
+    get:
+      operationId: listWeatherAlerts
+      summary: List weather alerts
+      tags:
+      - Weather Alerts
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/WeatherAlert'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /weather-alerts/{weather_alert_id}:
+    parameters:
+    - $ref: '#/components/parameters/weather_alert_id'
+    get:
+      operationId: getWeatherAlert
+      summary: Get a weather alert
+      tags:
+      - Weather Alerts
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /air-qualities:
+    get:
+      operationId: listAirQualities
+      summary: List air qualities
+      tags:
+      - Air Qualities
+      x-commons-tier: core
+      x-commons-share: 0.818
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AirQuality'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /stations:
+    get:
+      operationId: listStations
+      summary: List stations
+      tags:
+      - Stations
+      x-commons-tier: core
+      x-commons-share: 0.778
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Station'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createStation
+      summary: Create a station
+      tags:
+      - Stations
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /stations/{station_id}:
+    parameters:
+    - $ref: '#/components/parameters/station_id'
+    get:
+      operationId: getStation
+      summary: Get a station
+      tags:
+      - Stations
+      x-commons-tier: core
+      x-commons-share: 0.556
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+components:
+  schemas:
+    CurrentConditions:
+      $ref: ./schema/current_conditions.json
+    Forecast:
+      $ref: ./schema/forecast.json
+    HistoricalWeather:
+      $ref: ./schema/historical_weather.json
+    WeatherAlert:
+      $ref: ./schema/weather_alert.json
+    AirQuality:
+      $ref: ./schema/air_quality.json
+    Station:
+      $ref: ./schema/station.json
+  parameters:
+    current_conditions_id:
+      name: current_conditions_id
+      in: path
+      required: true
+      schema:
+        type: string
+    forecast_id:
+      name: forecast_id
+      in: path
+      required: true
+      schema:
+        type: string
+    historical_weather_id:
+      name: historical_weather_id
+      in: path
+      required: true
+      schema:
+        type: string
+    weather_alert_id:
+      name: weather_alert_id
+      in: path
+      required: true
+      schema:
+        type: string
+    air_quality_id:
+      name: air_quality_id
+      in: path
+      required: true
+      schema:
+        type: string
+    station_id:
+      name: station_id
+      in: path
+      required: true
+      schema:
+        type: string

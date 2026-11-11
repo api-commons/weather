@@ -1,0 +1,641 @@
+[
+ {
+  "slug": "2s-io",
+  "specs": [
+   "openapi/_original/2s-io-openapi.json"
+  ]
+ },
+ {
+  "slug": "accuweather",
+  "specs": [
+   "openapi/_original/accuweather-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "agrology",
+  "specs": [
+   "openapi/_original/agrology-public-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "airvisual",
+  "specs": [
+   "openapi/_original/openapi.json"
+  ]
+ },
+ {
+  "slug": "ambee",
+  "specs": [
+   "openapi/_original/ambee-openapi.yml"
+  ]
+ },
+ {
+  "slug": "apifreaks-api-hub-for-developers",
+  "specs": [
+   "openapi/_original/apifreaks-api-hub-for-developers-administrative-units-details-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-administrative-units-levels-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-administrative-units-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-air-quality-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-asn-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-astronomy-data-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-dns-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-domain-checker-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-email-validation-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-ip-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-ip-threat-intelligence-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-live-weather-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-phone-number-validation-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-screenshot-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-user-agent-parser-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-vat-rates-country-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-whois-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-bulk-zip-code-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-cities-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-commodity-fluctuation-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-commodity-prices-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-commodity-symbols-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-commodity-time-series-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-countries-details-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-countries-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-currency-converter-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-currency-fluctuation-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-currency-historical-data-limit-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-currency-rate-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-currency-supported-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-currency-symbols-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-currency-time-series-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-delete-pdf-page-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-dns-history-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-dns-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-domain-search-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-domain-search-with-suggestions-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-domain-whois-history-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-email-checker-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-financial-apis-supported-countries-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-flags-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-flags-supported-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-flood-forecast-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-forward-geocoding-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-geolocalized-currency-conversion-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-historical-commodity-prices-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-historical-currency-converter-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-historical-currency-rate-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-historical-weather-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-iban-validation-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-ip-locator-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-ip-threat-intelligence-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-linearize-pdf-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-live-weather-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-marine-weather-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-merge-pdf-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-compress-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-decrypt-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-encrypt-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-extract-pages-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-file-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-file-status-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-files-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-generator-bulk-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-generator-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-resource-download-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-resource-upload-binary-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-resource-upload-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-restrict-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-task-status-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-to-image-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-pdf-unrestrict-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-phone-validation-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-regions-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-reverse-dns-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-reverse-geocoding-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-reverse-whois-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-rotate-pdf-pages-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-split-pdf-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-ssl-certificate-chain-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-ssl-certificate-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-subdomain-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-subregions-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-swift-code-finder-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-swift-code-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-time-series-weather-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-timezone-converter-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-timezone-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-usage-credits-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-user-agent-parser-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-vat-number-validation-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-vat-rates-by-ip-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-vat-rates-country-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-weather-forecast-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-web-scraper-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-website-screenshot-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-whois-domain-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-whois-ip-lookup-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-zip-code-api-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-zip-code-distance-match-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-zip-code-distance-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-zip-codes-by-city-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-zip-codes-by-region-openapi.json",
+   "openapi/_original/apifreaks-api-hub-for-developers-zip-codes-radius-search-openapi.json"
+  ]
+ },
+ {
+  "slug": "apiverve",
+  "specs": [
+   "openapi/_original/apiverve-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "atmospore-pollen-forecasts",
+  "specs": [
+   "openapi/_original/atmospore-pollen-forecasts-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "aviationweather",
+  "specs": [
+   "openapi/_original/aviationweather-openapi.yml"
+  ]
+ },
+ {
+  "slug": "climateai",
+  "specs": [
+   "openapi/_original/climateai-platform-swagger.json",
+   "openapi/_original/climateai-weather-openapi.yml"
+  ]
+ },
+ {
+  "slug": "cracked",
+  "specs": [
+   "openapi/_original/cracked-openapi.json",
+   "openapi/_original/cracked-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "danish-meteorological-institutes",
+  "specs": [
+   "openapi/_original/dmi-open-data-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "dark-sky",
+  "specs": [
+   "openapi/_original/openapi.yml"
+  ]
+ },
+ {
+  "slug": "dtn",
+  "specs": [
+   "openapi/_original/dtn-agency-bulletin-api-openapi.json",
+   "openapi/_original/dtn-agency-bulletin-websocket-api-openapi.json",
+   "openapi/_original/dtn-alerting-api-openapi.json",
+   "openapi/_original/dtn-astronomical-api-openapi.json",
+   "openapi/_original/dtn-climatology-api-openapi.json",
+   "openapi/_original/dtn-developer-portal-api-openapi.json",
+   "openapi/_original/dtn-digital-commerce-orders-openapi.json",
+   "openapi/_original/dtn-energy-digital-commerce-integrations-api-openapi.json",
+   "openapi/_original/dtn-energy-event-index-api-openapi.json",
+   "openapi/_original/dtn-enhanced-flight-hazards-api-openapi.json",
+   "openapi/_original/dtn-farm-intel-api-openapi.json",
+   "openapi/_original/dtn-financial-market-data-openapi.json",
+   "openapi/_original/dtn-lightning-api-openapi.json",
+   "openapi/_original/dtn-lightning-websocket-openapi.json",
+   "openapi/_original/dtn-map-tile-api-openapi.json",
+   "openapi/_original/dtn-marine-weather-api-openapi.json",
+   "openapi/_original/dtn-metars-api-openapi.json",
+   "openapi/_original/dtn-notams-api-openapi.json",
+   "openapi/_original/dtn-observation-api-openapi.json",
+   "openapi/_original/dtn-openapi.json",
+   "openapi/_original/dtn-pavement-conditions-api-openapi.json",
+   "openapi/_original/dtn-pireps-api-openapi.json",
+   "openapi/_original/dtn-precipitation-api-openapi.json",
+   "openapi/_original/dtn-probabilistic-api-openapi.json",
+   "openapi/_original/dtn-radarscope-radar-products-openapi.json",
+   "openapi/_original/dtn-refined-fuels-demand-openapi.json",
+   "openapi/_original/dtn-renewables-api-openapi.json",
+   "openapi/_original/dtn-shipping-api-openapi.json",
+   "openapi/_original/dtn-sigmets-airmets-openapi.json",
+   "openapi/_original/dtn-soil-api-openapi.json",
+   "openapi/_original/dtn-storm-impact-analytics-openapi.json",
+   "openapi/_original/dtn-storm-risk-analytics-api-openapi.json",
+   "openapi/_original/dtn-tafs-api-openapi.json",
+   "openapi/_original/dtn-tropical-api-openapi.json",
+   "openapi/_original/dtn-weather-conditions-api-openapi.json",
+   "openapi/_original/dtn-weather-conditions-openapi.yml",
+   "openapi/_original/dtn-websocket-api-openapi.json",
+   "openapi/_original/dtn-windsaloft-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "dynamicfeed-ai",
+  "specs": [
+   "openapi/_original/dynamicfeed-ai-agent-public-openapi.json",
+   "openapi/_original/dynamicfeed-ai-openapi.json"
+  ]
+ },
+ {
+  "slug": "ecmwf",
+  "specs": [
+   "openapi/_original/ecmwf-data-stores-catalogue-openapi.json",
+   "openapi/_original/ecmwf-data-stores-processing-openapi.json",
+   "openapi/_original/ecmwf-data-stores-profiles-openapi.json"
+  ]
+ },
+ {
+  "slug": "energy-utilities",
+  "specs": [
+   "openapi/_original/energy-utilities-openapi.yml"
+  ]
+ },
+ {
+  "slug": "eumetsat",
+  "specs": [
+   "openapi/_original/eumetsat-data-store-browse-openapi.json",
+   "openapi/_original/eumetsat-data-store-browse-openapi.yml",
+   "openapi/_original/eumetsat-data-store-cart-openapi.json",
+   "openapi/_original/eumetsat-data-store-cart-openapi.yml",
+   "openapi/_original/eumetsat-data-store-download-openapi.json",
+   "openapi/_original/eumetsat-data-store-download-openapi.yml",
+   "openapi/_original/eumetsat-data-store-search-openapi.json",
+   "openapi/_original/eumetsat-data-store-search-openapi.yml",
+   "openapi/_original/eumetsat-data-store-subscription-openapi.json",
+   "openapi/_original/eumetsat-data-store-subscription-openapi.yml",
+   "openapi/_original/eumetsat-data-tailor-openapi.json",
+   "openapi/_original/eumetsat-data-tailor-openapi.yml",
+   "openapi/_original/eumetsat-dtws-openapi.json",
+   "openapi/_original/eumetsat-dtws-openapi.yml",
+   "openapi/_original/eumetsat-health-check-openapi.json",
+   "openapi/_original/eumetsat-health-check-openapi.yml",
+   "openapi/_original/eumetsat-product-navigator-csw-openapi.json",
+   "openapi/_original/eumetsat-product-navigator-csw-openapi.yml",
+   "openapi/_original/eumetsat-product-navigator-openapi.json",
+   "openapi/_original/eumetsat-product-navigator-openapi.yml",
+   "openapi/_original/eumetsat-user-info-openapi.json",
+   "openapi/_original/eumetsat-user-info-openapi.yml",
+   "openapi/_original/eumetsat-user-preferences-openapi.json",
+   "openapi/_original/eumetsat-user-preferences-openapi.yml"
+  ]
+ },
+ {
+  "slug": "farmers-edge",
+  "specs": [
+   "openapi/_original/farmers-edge-farmcommand-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "here",
+  "specs": [
+   "openapi/_original/here-account-v1-openapi.yml",
+   "openapi/_original/here-account-v1-openapi_2.yml",
+   "openapi/_original/here-api-lookup-v1-openapi.yml",
+   "openapi/_original/here-api-lookup-v1-openapi_2.yml",
+   "openapi/_original/here-authentication-v1-1-openapi.yml",
+   "openapi/_original/here-authentication-v1-1-openapi_2.yml",
+   "openapi/_original/here-authorization-v1-1-openapi.yml",
+   "openapi/_original/here-authorization-v1-1-openapi_2.yml",
+   "openapi/_original/here-cost-management-usage-v2-openapi.yml",
+   "openapi/_original/here-cost-management-usage-v2-openapi_2.yml",
+   "openapi/_original/here-data-blob-v1-openapi.yml",
+   "openapi/_original/here-data-blob-v1-openapi_2.yml",
+   "openapi/_original/here-data-blob-v2-openapi.yml",
+   "openapi/_original/here-data-blob-v2-openapi_2.yml",
+   "openapi/_original/here-data-config-v1-openapi.yml",
+   "openapi/_original/here-data-config-v1-openapi_2.yml",
+   "openapi/_original/here-data-index-v1-openapi.yml",
+   "openapi/_original/here-data-index-v1-openapi_2.yml",
+   "openapi/_original/here-data-ingest-v1-openapi.yml",
+   "openapi/_original/here-data-ingest-v1-openapi_2.yml",
+   "openapi/_original/here-data-metadata-v1-openapi.yml",
+   "openapi/_original/here-data-metadata-v1-openapi_2.yml",
+   "openapi/_original/here-data-notification-v1-openapi.yml",
+   "openapi/_original/here-data-notification-v1-openapi_2.yml",
+   "openapi/_original/here-data-publish-v2-openapi.yml",
+   "openapi/_original/here-data-publish-v2-openapi_2.yml",
+   "openapi/_original/here-data-query-v1-openapi.yml",
+   "openapi/_original/here-data-query-v1-openapi_2.yml",
+   "openapi/_original/here-data-stream-v2-openapi.yml",
+   "openapi/_original/here-data-stream-v2-openapi_2.yml",
+   "openapi/_original/here-data-volatile-blob-v1-openapi.yml",
+   "openapi/_original/here-data-volatile-blob-v1-openapi_2.yml",
+   "openapi/_original/here-destination-weather-v1-openapi.yml",
+   "openapi/_original/here-destination-weather-v1-openapi_2.yml",
+   "openapi/_original/here-destination-weather-v3-openapi.yml",
+   "openapi/_original/here-destination-weather-v3-openapi_2.yml",
+   "openapi/_original/here-ev-charge-points-v3-openapi.yml",
+   "openapi/_original/here-ev-charge-points-v3-openapi_2.yml",
+   "openapi/_original/here-fuel-prices-v2-openapi.yml",
+   "openapi/_original/here-fuel-prices-v2-openapi_2.yml",
+   "openapi/_original/here-fuel-prices-v3-openapi.yml",
+   "openapi/_original/here-fuel-prices-v3-openapi_2.yml",
+   "openapi/_original/here-geocoding-and-search-v7-openapi.json",
+   "openapi/_original/here-geocoding-and-search-v7-openapi_2.json",
+   "openapi/_original/here-geocoding-batch-v7-openapi.yml",
+   "openapi/_original/here-geocoding-batch-v7-openapi_2.yml",
+   "openapi/_original/here-geofencing-v1-openapi.json",
+   "openapi/_original/here-geofencing-v1-openapi_2.json",
+   "openapi/_original/here-gnss-data-v2-openapi.yml",
+   "openapi/_original/here-gnss-data-v2-openapi_2.yml",
+   "openapi/_original/here-indoor-routing-v1-openapi.yml",
+   "openapi/_original/here-indoor-routing-v1-openapi_2.yml",
+   "openapi/_original/here-interactive-map-v1-openapi.yml",
+   "openapi/_original/here-interactive-map-v1-openapi_2.yml",
+   "openapi/_original/here-intermodal-routing-v8-openapi.yml",
+   "openapi/_original/here-intermodal-routing-v8-openapi_2.yml",
+   "openapi/_original/here-isoline-routing-v8-openapi.yml",
+   "openapi/_original/here-isoline-routing-v8-openapi_2.yml",
+   "openapi/_original/here-map-attributes-v1-openapi.json",
+   "openapi/_original/here-map-attributes-v1-openapi_2.json",
+   "openapi/_original/here-map-image-v3-openapi.yml",
+   "openapi/_original/here-map-image-v3-openapi_2.yml",
+   "openapi/_original/here-matrix-routing-v8-openapi.yml",
+   "openapi/_original/here-matrix-routing-v8-openapi_2.yml",
+   "openapi/_original/here-network-positioning-v1-openapi.yml",
+   "openapi/_original/here-network-positioning-v1-openapi_2.yml",
+   "openapi/_original/here-network-positioning-v2-openapi.yml",
+   "openapi/_original/here-network-positioning-v2-openapi_2.yml",
+   "openapi/_original/here-oauth2-token-v1-openapi.yml",
+   "openapi/_original/here-oauth2-token-v1-openapi_2.yml",
+   "openapi/_original/here-pipeline-management-v2-openapi.yml",
+   "openapi/_original/here-pipeline-management-v2-openapi_2.yml",
+   "openapi/_original/here-public-transit-v8-openapi.yml",
+   "openapi/_original/here-public-transit-v8-openapi_2.yml",
+   "openapi/_original/here-raster-tile-v3-openapi.yml",
+   "openapi/_original/here-raster-tile-v3-openapi_2.yml",
+   "openapi/_original/here-rate-limit-rules-v1-openapi.yml",
+   "openapi/_original/here-rate-limit-rules-v1-openapi_2.yml",
+   "openapi/_original/here-route-matching-v8-openapi.json",
+   "openapi/_original/here-route-matching-v8-openapi_2.json",
+   "openapi/_original/here-routing-v8-openapi.yml",
+   "openapi/_original/here-routing-v8-openapi_2.yml",
+   "openapi/_original/here-tour-planning-v3-openapi.yml",
+   "openapi/_original/here-tour-planning-v3-openapi_2.yml",
+   "openapi/_original/here-tracking-v2-openapi.json",
+   "openapi/_original/here-tracking-v2-openapi_2.json",
+   "openapi/_original/here-traffic-raster-tile-v3-openapi.yml",
+   "openapi/_original/here-traffic-raster-tile-v3-openapi_2.yml",
+   "openapi/_original/here-traffic-v7-openapi.yml",
+   "openapi/_original/here-traffic-v7-openapi_2.yml",
+   "openapi/_original/here-traffic-vector-tile-v2-openapi.yml",
+   "openapi/_original/here-traffic-vector-tile-v2-openapi_2.yml",
+   "openapi/_original/here-waypoints-sequence-v1-openapi.json",
+   "openapi/_original/here-waypoints-sequence-v1-openapi_2.json",
+   "openapi/_original/here-wego-user-service-v1-openapi.json",
+   "openapi/_original/here-wego-user-service-v1-openapi_2.json"
+  ]
+ },
+ {
+  "slug": "leaf-agriculture",
+  "specs": [
+   "openapi/_original/leaf-agriculture-openapi.yml"
+  ]
+ },
+ {
+  "slug": "met-office",
+  "specs": [
+   "openapi/_original/atmosphericmodel_versioned_subscriber.json",
+   "openapi/_original/land_obs_subscriber.json",
+   "openapi/_original/mapimages_subscriber.json",
+   "openapi/_original/met-office-atmospheric-models-openapi.yml",
+   "openapi/_original/met-office-blended-probabilistic-forecast-openapi.yml",
+   "openapi/_original/met-office-land-observations-openapi.yml",
+   "openapi/_original/met-office-map-images-openapi.yml",
+   "openapi/_original/met-office-nswws-warnings-openapi.yml",
+   "openapi/_original/met-office-site-specific-openapi.yml",
+   "openapi/_original/mo-site-specific-blended-probabilistic-forecast-v2_subscriber.json",
+   "openapi/_original/nswws_api_subscriber.json",
+   "openapi/_original/weathercloud2api_subscriber.json"
+  ]
+ },
+ {
+  "slug": "meteomatics",
+  "specs": [
+   "openapi/_original/meteomatics-weather-openapi.yml"
+  ]
+ },
+ {
+  "slug": "meteosource-air-quality-data-api",
+  "specs": [
+   "openapi/_original/meteosource-air-quality-data-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "mixerbox",
+  "specs": [
+   "openapi/_original/mixerbox-calendar-openapi-original.json",
+   "openapi/_original/mixerbox-chatpdf-openapi-original.json",
+   "openapi/_original/mixerbox-diagrams-openapi-original.json",
+   "openapi/_original/mixerbox-imagegen-openapi-original.json",
+   "openapi/_original/mixerbox-oneplayer-openapi-original.json",
+   "openapi/_original/mixerbox-photomagic-openapi-original.json",
+   "openapi/_original/mixerbox-podcasts-openapi-original.json",
+   "openapi/_original/mixerbox-promptpro-openapi-original.json",
+   "openapi/_original/mixerbox-qr-openapi-original.json",
+   "openapi/_original/mixerbox-scholar-openapi-original.json",
+   "openapi/_original/mixerbox-translate-openapi-original.json",
+   "openapi/_original/mixerbox-weather-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "national-oceanic-and-atmospheric-administration",
+  "specs": [
+   "openapi/_original/national-oceanic-and-atmospheric-administration-openapi.yml"
+  ]
+ },
+ {
+  "slug": "national-weather-service",
+  "specs": [
+   "openapi/_original/national-weather-service-openapi.json"
+  ]
+ },
+ {
+  "slug": "noaa",
+  "specs": [
+   "openapi/_original/noaa-aviation-weather-openapi.yml",
+   "openapi/_original/noaa-nws-openapi.yml"
+  ]
+ },
+ {
+  "slug": "noaa-co-ops",
+  "specs": [
+   "openapi/_original/data-retrieval-api.json",
+   "openapi/_original/derived-product-api.json",
+   "openapi/_original/metadata-api.json"
+  ]
+ },
+ {
+  "slug": "noaa-erddap",
+  "specs": [
+   "openapi/_original/openapi.yaml"
+  ]
+ },
+ {
+  "slug": "noaa-gov",
+  "specs": [
+   "openapi/_original/weather-gov-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "open-meteo",
+  "specs": [
+   "openapi/_original/open-meteo-air-quality-openapi.yml",
+   "openapi/_original/open-meteo-climate-openapi.yml",
+   "openapi/_original/open-meteo-elevation-openapi.yml",
+   "openapi/_original/open-meteo-ensemble-openapi.yml",
+   "openapi/_original/open-meteo-flood-openapi.yml",
+   "openapi/_original/open-meteo-forecast-openapi.yml",
+   "openapi/_original/open-meteo-historical-weather-openapi.yml",
+   "openapi/_original/open-meteo-marine-openapi.yml",
+   "openapi/_original/open-meteo-seasonal-openapi.yml"
+  ]
+ },
+ {
+  "slug": "openuv",
+  "specs": [
+   "openapi/_original/openuv-openapi.yml"
+  ]
+ },
+ {
+  "slug": "openweather",
+  "specs": [
+   "openapi/_original/openweather-openapi.yml"
+  ]
+ },
+ {
+  "slug": "openweathermap",
+  "specs": [
+   "openapi/_original/openweathermap-accumulated-parameters-openapi.yml",
+   "openapi/_original/openweathermap-air-pollution-openapi.yml",
+   "openapi/_original/openweathermap-current-weather-openapi.yml",
+   "openapi/_original/openweathermap-forecast-openapi.yml",
+   "openapi/_original/openweathermap-geocoding-openapi.yml",
+   "openapi/_original/openweathermap-history-openapi.yml",
+   "openapi/_original/openweathermap-one-call-openapi.yml",
+   "openapi/_original/openweathermap-road-risk-openapi.yml",
+   "openapi/_original/openweathermap-solar-openapi.yml",
+   "openapi/_original/openweathermap-statistical-weather-openapi.yml",
+   "openapi/_original/openweathermap-weather-maps-openapi.yml",
+   "openapi/_original/openweathermap-weather-stations-openapi.yml"
+  ]
+ },
+ {
+  "slug": "rainbow-ai",
+  "specs": [
+   "openapi/_original/rainbow-ai-nowcast-openapi.yml",
+   "openapi/_original/rainbow-ai-tiles-openapi.yml"
+  ]
+ },
+ {
+  "slug": "revolutio",
+  "specs": [
+   "openapi/_original/revolutio-hazard-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "shipfinder-ais-data-api",
+  "specs": [
+   "openapi/_original/shipfinder-ais-data-api-openapi-original.yml",
+   "openapi/_original/shipfinder-ais-data-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "sinay",
+  "specs": [
+   "openapi/_original/sinay-openapi.yml"
+  ]
+ },
+ {
+  "slug": "skymerse",
+  "specs": [
+   "openapi/_original/skymerse-notamify-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "solcast",
+  "specs": [
+   "openapi/_original/solcast-openapi.yml"
+  ]
+ },
+ {
+  "slug": "southendonsea",
+  "specs": [
+   "openapi/_original/southendonsea-now-api-openapi.yml",
+   "openapi/_original/southendonsea-openapi.json"
+  ]
+ },
+ {
+  "slug": "stormglass",
+  "specs": [
+   "openapi/_original/stormglass-openapi.yml"
+  ]
+ },
+ {
+  "slug": "sunrise-sunset",
+  "specs": [
+   "openapi/_original/openapi.yml"
+  ]
+ },
+ {
+  "slug": "tomorrow-io",
+  "specs": [
+   "openapi/_original/tomorrow-io-map-tiles-api-openapi.yml",
+   "openapi/_original/tomorrow-io-weather-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "waqi",
+  "specs": [
+   "openapi/_original/waqi-openapi.json"
+  ]
+ },
+ {
+  "slug": "weather-gov",
+  "specs": [
+   "openapi/_original/openapi.yml"
+  ]
+ },
+ {
+  "slug": "weatherapi",
+  "specs": [
+   "openapi/_original/weatherapi-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "weatherbit",
+  "specs": [
+   "openapi/_original/weatherbit-current-weather-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "windy",
+  "specs": [
+   "openapi/_original/windy-openapi.yml"
+  ]
+ },
+ {
+  "slug": "wmo",
+  "specs": [
+   "openapi/_original/wis2-global-discovery-catalogue-openapi.json"
+  ]
+ },
+ {
+  "slug": "wunderground",
+  "specs": [
+   "openapi/_original/wunderground-pws-api.yml"
+  ]
+ },
+ {
+  "slug": "xweather",
+  "specs": [
+   "openapi/_original/xweather-weather-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "yr-no",
+  "specs": [
+   "openapi/_original/yr-no-locationforecast-openapi.yml",
+   "openapi/_original/yr-no-metalerts-openapi.yml",
+   "openapi/_original/yr-no-nowcast-openapi.yml",
+   "openapi/_original/yr-no-oceanforecast-openapi.yml",
+   "openapi/_original/yr-no-sunrise-openapi.yml"
+  ]
+ }
+]

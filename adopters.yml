@@ -1,0 +1,175 @@
+context: weather
+generated: '2026-11-10'
+adopters:
+- provider: 2s-io
+  apis_io: https://apis.io/providers/2s-io/
+  crosswalk: crosswalk/2s-io.yml
+  concepts:
+  - air_quality
+  - current_conditions
+  - forecast
+  - historical_weather
+  - weather_alert
+- provider: accuweather
+  apis_io: https://apis.io/providers/accuweather/
+  crosswalk: crosswalk/accuweather.yml
+  concepts:
+  - air_quality
+  - current_conditions
+- provider: airvisual
+  apis_io: https://apis.io/providers/airvisual/
+  crosswalk: crosswalk/airvisual.yml
+  concepts:
+  - station
+- provider: apifreaks-api-hub-for-developers
+  apis_io: https://apis.io/providers/apifreaks-api-hub-for-developers/
+  crosswalk: crosswalk/apifreaks-api-hub-for-developers.yml
+  concepts:
+  - air_quality
+  - current_conditions
+  - forecast
+  - historical_weather
+- provider: apiverve
+  apis_io: https://apis.io/providers/apiverve/
+  crosswalk: crosswalk/apiverve.yml
+  concepts:
+  - air_quality
+- provider: atmospore-pollen-forecasts
+  apis_io: https://apis.io/providers/atmospore-pollen-forecasts/
+  crosswalk: crosswalk/atmospore-pollen-forecasts.yml
+  concepts:
+  - air_quality
+- provider: climateai
+  apis_io: https://apis.io/providers/climateai/
+  crosswalk: crosswalk/climateai.yml
+  concepts:
+  - forecast
+  - historical_weather
+- provider: dtn
+  apis_io: https://apis.io/providers/dtn/
+  crosswalk: crosswalk/dtn.yml
+  concepts:
+  - current_conditions
+  - forecast
+  - station
+  - weather_alert
+- provider: dynamicfeed-ai
+  apis_io: https://apis.io/providers/dynamicfeed-ai/
+  crosswalk: crosswalk/dynamicfeed-ai.yml
+  concepts:
+  - air_quality
+  - current_conditions
+  - forecast
+  - historical_weather
+  - station
+- provider: farmers-edge
+  apis_io: https://apis.io/providers/farmers-edge/
+  crosswalk: crosswalk/farmers-edge.yml
+  concepts:
+  - weather_alert
+- provider: here
+  apis_io: https://apis.io/providers/here/
+  crosswalk: crosswalk/here.yml
+  concepts:
+  - station
+  - weather_alert
+- provider: leaf-agriculture
+  apis_io: https://apis.io/providers/leaf-agriculture/
+  crosswalk: crosswalk/leaf-agriculture.yml
+  concepts:
+  - forecast
+  - historical_weather
+- provider: meteosource-air-quality-data-api
+  apis_io: https://apis.io/providers/meteosource-air-quality-data-api/
+  crosswalk: crosswalk/meteosource-air-quality-data-api.yml
+  concepts:
+  - air_quality
+- provider: national-weather-service
+  apis_io: https://apis.io/providers/national-weather-service/
+  crosswalk: crosswalk/national-weather-service.yml
+  concepts:
+  - current_conditions
+  - forecast
+  - historical_weather
+  - station
+  - weather_alert
+- provider: noaa-co-ops
+  apis_io: https://apis.io/providers/noaa-co-ops/
+  crosswalk: crosswalk/noaa-co-ops.yml
+  concepts:
+  - station
+- provider: open-meteo
+  apis_io: https://apis.io/providers/open-meteo/
+  crosswalk: crosswalk/open-meteo.yml
+  concepts:
+  - air_quality
+  - forecast
+- provider: openuv
+  apis_io: https://apis.io/providers/openuv/
+  crosswalk: crosswalk/openuv.yml
+  concepts:
+  - forecast
+- provider: openweathermap
+  apis_io: https://apis.io/providers/openweathermap/
+  crosswalk: crosswalk/openweathermap.yml
+  concepts:
+  - air_quality
+  - current_conditions
+  - forecast
+  - historical_weather
+  - station
+  - weather_alert
+- provider: sinay
+  apis_io: https://apis.io/providers/sinay/
+  crosswalk: crosswalk/sinay.yml
+  concepts:
+  - station
+- provider: southendonsea
+  apis_io: https://apis.io/providers/southendonsea/
+  crosswalk: crosswalk/southendonsea.yml
+  concepts:
+  - historical_weather
+- provider: stormglass
+  apis_io: https://apis.io/providers/stormglass/
+  crosswalk: crosswalk/stormglass.yml
+  concepts:
+  - station
+- provider: tomorrow-io
+  apis_io: https://apis.io/providers/tomorrow-io/
+  crosswalk: crosswalk/tomorrow-io.yml
+  concepts:
+  - current_conditions
+  - forecast
+- provider: weatherapi
+  apis_io: https://apis.io/providers/weatherapi/
+  crosswalk: crosswalk/weatherapi.yml
+  concepts:
+  - current_conditions
+  - forecast
+  - historical_weather
+  - weather_alert
+- provider: weatherbit
+  apis_io: https://apis.io/providers/weatherbit/
+  crosswalk: crosswalk/weatherbit.yml
+  concepts:
+  - air_quality
+  - current_conditions
+  - forecast
+  - weather_alert
+- provider: wunderground
+  apis_io: https://apis.io/providers/wunderground/
+  crosswalk: crosswalk/wunderground.yml
+  concepts:
+  - current_conditions
+- provider: xweather
+  apis_io: https://apis.io/providers/xweather/
+  crosswalk: crosswalk/xweather.yml
+  concepts:
+  - air_quality
+  - forecast
+  - weather_alert
+- provider: yr-no
+  apis_io: https://apis.io/providers/yr-no/
+  crosswalk: crosswalk/yr-no.yml
+  concepts:
+  - current_conditions
