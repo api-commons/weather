@@ -1,7 +1,7 @@
 provider: leaf-agriculture
 apis_io: https://apis.io/providers/leaf-agriculture/
 context: weather
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   forecast:
     path_segment:

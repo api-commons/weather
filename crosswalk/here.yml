@@ -1,7 +1,7 @@
 provider: here
 apis_io: https://apis.io/providers/here/
 context: weather
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   weather_alert:
     path_segment:

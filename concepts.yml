@@ -83,6 +83,7 @@ findings:
   - "The physical quantities are shared even where the shapes are not: temperature, humidity,
     wind and pressure collapse to one name each through the aliases, so the vocabulary is
     usable as a dictionary even though no resource reaches core."
+  - "Measured against its standard, the alert is CAP: the Common Alerting Protocol 1.2 defines every core property of a weather alert, and 11 fields (urgency, certainty, response type, audience...) that providers in the cohort do not publish."
 decisions:
   - "Forecasting is not a cohort tag: it covers demand and financial forecasting."
   - "Current conditions are `/current`, history `/history` and alerts `/weather-alerts` (bare
@@ -90,3 +91,7 @@ decisions:
   - "NOAA, noaa.gov, weather.gov and the National Weather Service are one publisher and count
     once; OpenWeather's two listings likewise."
   - "Pollen counts as air quality."
+
+standards:
+  - standard: cap-1.2
+    concepts: {weather_alert: [alert, info, area]}

@@ -19,7 +19,7 @@ generated. Every number below is a count of providers.
 | air_quality | 11 | 10 | time 50% | air-quality 4, airquality 4, pollen 1, air_quality 1 |
 | station | 9 | 8 | name 88%, id 62% | stations 8, station 2 |
 
-Cohort: 54 providers with harvested OpenAPI, 27 crosswalks. Of the providers exposing a current_conditions: 8% create, 92% list, 8% fetch, 0% update, 0% delete. Generated 2026-11-10 by build.py.
+Cohort: 54 providers with harvested OpenAPI, 27 crosswalks. Of the providers exposing a current_conditions: 8% create, 92% list, 8% fetch, 0% update, 0% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
@@ -30,6 +30,17 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 - Weather agrees on less than any other data context. Current conditions come closest -- a condition, a temperature and a time, each at 36-45% -- and forecasts agree on nothing: every provider nests readings in time-series arrays (daily, hourly, list, timelines) wrapped in its own location metadata.
 - Counted per listing, alerts looked standardised: four National Weather Service listings return the Common Alerting Protocol. Counted once, alerts still agree on the event and its severity -- the two fields every warning needs -- and little else.
 - The physical quantities are shared even where the shapes are not: temperature, humidity, wind and pressure collapse to one name each through the aliases, so the vocabulary is usable as a dictionary even though no resource reaches core.
+- Measured against its standard, the alert is CAP: the Common Alerting Protocol 1.2 defines every core property of a weather alert, and 11 fields (urgency, certainty, response type, audience...) that providers in the cohort do not publish.
+
+## Measured against the standard
+
+The census reads what providers publish. Where the domain has a standard, the standard's own
+definition is read as one more voice: how much of the measured core it defines, and what it
+defines that no provider in the cohort publishes. Crosswalks are in [standards/](standards).
+
+| Standard | Concept | Core defined by the standard | Fields only the standard has |
+| --- | --- | ---: | ---: |
+| [cap-1.2](https://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2.xsd) | `weather_alert` | 100% | 11 |
 
 ## Artifacts
 

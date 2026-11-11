@@ -1,7 +1,7 @@
 provider: apiverve
 apis_io: https://apis.io/providers/apiverve/
 context: weather
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   air_quality:
     path_segment:

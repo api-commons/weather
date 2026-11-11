@@ -1,7 +1,7 @@
 provider: stormglass
 apis_io: https://apis.io/providers/stormglass/
 context: weather
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   station:
     path_segment:

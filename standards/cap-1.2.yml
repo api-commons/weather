@@ -1,0 +1,51 @@
+standard: cap-1.2
+source: https://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2.xsd
+concepts:
+  weather_alert:
+    objects:
+    - alert
+    - info
+    - area
+    core_coverage: 1.0
+    extended_coverage: 0.667
+    core_missing_from_standard: []
+    crosswalk:
+      identifier: identifier
+      sender: sender
+      created_at: sent
+      status: status
+      msg_type: msgType
+      source: source
+      scope: scope
+      restriction: restriction
+      addresses: addresses
+      code: code
+      note: note
+      references: references
+      info: info
+      language: language
+      category: category
+      event: event
+      severity: urgency
+      certainty: certainty
+      event_code: eventCode
+      starts_at: effective
+      ends_at: expires
+      sender_name: senderName
+      condition: description
+      instruction: instruction
+      area: area
+      geocode: geocode
+    standard_only:
+    - incidents
+    - responseType
+    - audience
+    - web
+    - contact
+    - parameter
+    - resource
+    - polygon
+    - circle
+    - altitude
+    - ceiling
+defines_unpublished: {}
