@@ -11,7 +11,7 @@ info:
 paths:
   /current:
     get:
-      operationId: listCurrentConditionses
+      operationId: listCurrent
       summary: List current
       tags:
       - Current Conditionses
@@ -63,7 +63,7 @@ paths:
           type: string
   /history:
     get:
-      operationId: listHistoricalWeathers
+      operationId: listHistory
       summary: List history
       tags:
       - Historical Weathers
