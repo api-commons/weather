@@ -1166,10 +1166,18 @@
      "diffuseHorizontalIrradiance": "number",
      "shortWaveRadiation": "number",
      "snowfallAmount": "number",
-     "generatedAt": "string",
-     "units": "string",
-     "location": "object",
-     "forecasts": "array"
+     "validAt": "string",
+     "airTemperatureInCelsius": "number",
+     "precipitationAmountInMillimeter": "number",
+     "precipitationProbabilityInPercent": "number",
+     "windSpeedInMeterPerSecond": "number",
+     "windDirectionInDegree": "number",
+     "windGustInMeterPerSecond": "number",
+     "relativeHumidityInPercent": "number",
+     "weatherSymbol": "integer",
+     "validOn": "string",
+     "maxAirTemperatureInCelsius": "number",
+     "minAirTemperatureInCelsius": "number"
     },
     "evidence": [
      "openapi/_original/dtn-radarscope-radar-products-openapi.json#GET /feeds/v3/tropical_cyclone/forecasts",
@@ -1235,8 +1243,9 @@
      "validTimes": null,
      "elevation": "object",
      "periods": "array",
-     "zone": "string",
-     "updated": "string"
+     "number": "integer",
+     "name": "string",
+     "detailedForecast": "string"
     },
     "evidence": [
      "openapi/_original/national-weather-service-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast",
@@ -1265,8 +1274,9 @@
      "validTimes": null,
      "elevation": "object",
      "periods": "array",
-     "zone": "string",
-     "updated": "string"
+     "number": "integer",
+     "name": "string",
+     "detailedForecast": "string"
     },
     "evidence": [
      "openapi/_original/noaa-nws-openapi.yml#GET /gridpoints/{wfo}/{x},{y}/forecast",
@@ -1298,8 +1308,9 @@
      "validTimes": null,
      "elevation": "object",
      "periods": "array",
-     "zone": "string",
-     "updated": "string"
+     "number": "integer",
+     "name": "string",
+     "detailedForecast": "string"
     },
     "evidence": [
      "openapi/_original/weather-gov-api-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast",
@@ -1369,8 +1380,9 @@
      "hourly": "array",
      "daily": "array",
      "alerts": "array",
-     "coord": "object",
-     "list": "array"
+     "dt": "integer",
+     "main": "object",
+     "components": "object"
     },
     "evidence": [
      "openapi/_original/openweather-openapi.yml#GET /air_pollution/forecast",
@@ -1387,12 +1399,27 @@
      "GET collection"
     ],
     "properties": {
-     "coord": "object",
-     "list": "array",
-     "cod": "string",
-     "message": "number",
-     "cnt": "integer",
-     "city": "object"
+     "dt": "integer",
+     "main": "object",
+     "components": "object",
+     "weather": "array",
+     "clouds": "object",
+     "wind": "object",
+     "visibility": "integer",
+     "pop": "number",
+     "rain": "object",
+     "snow": "object",
+     "sys": "object",
+     "dt_txt": "string",
+     "sunrise": "integer",
+     "sunset": "integer",
+     "temp": "object",
+     "feels_like": "object",
+     "pressure": "integer",
+     "humidity": "integer",
+     "speed": "number",
+     "deg": "integer",
+     "gust": "number"
     },
     "evidence": [
      "openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution/forecast",
@@ -1452,8 +1479,9 @@
      "validTimes": null,
      "elevation": "object",
      "periods": "array",
-     "zone": "string",
-     "updated": "string"
+     "number": "integer",
+     "name": "string",
+     "detailedForecast": "string"
     },
     "evidence": [
      "openapi/_original/openapi.yml#GET /gridpoints/{wfo}/{x},{y}/forecast",
@@ -1510,7 +1538,26 @@
     "properties": {
      "success": "boolean",
      "error": "object",
-     "response": "object"
+     "timestamp": "integer",
+     "dateTimeISO": "string",
+     "maxTempC": "number",
+     "maxTempF": "number",
+     "minTempC": "number",
+     "minTempF": "number",
+     "avgTempC": "number",
+     "avgTempF": "number",
+     "precipMM": "number",
+     "precipIN": "number",
+     "pop": "integer",
+     "humidity": "integer",
+     "windSpeedKPH": "number",
+     "windSpeedMPH": "number",
+     "windDir": "string",
+     "windDirDEG": "number",
+     "weather": "string",
+     "weatherCoded": "array",
+     "icon": "string",
+     "isDay": "boolean"
     },
     "evidence": [
      "openapi/_original/xweather-weather-api-openapi.yml#GET /forecasts/{location}"
@@ -1547,14 +1594,43 @@
      "GET collection"
     ],
     "properties": {
-     "totalPages": "integer",
-     "currentPage": "integer",
-     "totalRecords": "integer",
-     "historicalDnsRecords": "array",
+     "name": "string",
+     "type": "integer",
+     "dnsType": "string",
+     "ttl": "integer",
+     "rawText": "string",
+     "rRsetType": "integer",
+     "address": "string",
+     "target": "string",
+     "priority": "integer",
+     "singleName": "string",
+     "admin": "string",
+     "host": "string",
+     "expire": "integer",
+     "minimum": "integer",
+     "refresh": "integer",
+     "retry": "integer",
+     "serial": "integer",
+     "strings": "array",
+     "num": "integer",
      "status": "boolean",
-     "whois": "string",
-     "total_records": "string",
-     "whois_domains_historical": "array",
+     "domain_name": "string",
+     "query_time": "string",
+     "whois_server": "string",
+     "domain_registered": "string",
+     "create_date": "string",
+     "update_date": "string",
+     "expiry_date": "string",
+     "domain_registrar": "object",
+     "reseller_contact": "object",
+     "registrant_contact": "object",
+     "administrative_contact": "object",
+     "technical_contact": "object",
+     "billing_contact": "object",
+     "name_servers": "array",
+     "domain_status": "array",
+     "whois_raw_domain": "string",
+     "registry_data": "object",
      "success": "boolean",
      "date": "string",
      "rates": "object",
@@ -1790,8 +1866,9 @@
      "GET collection"
     ],
     "properties": {
-     "coord": "object",
-     "list": "array"
+     "dt": "integer",
+     "main": "object",
+     "components": "object"
     },
     "evidence": [
      "openapi/_original/openweather-openapi.yml#GET /air_pollution/history",
@@ -1806,8 +1883,9 @@
      "GET collection"
     ],
     "properties": {
-     "coord": "object",
-     "list": "array"
+     "dt": "integer",
+     "main": "object",
+     "components": "object"
     },
     "evidence": [
      "openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution/history"
@@ -1989,7 +2067,13 @@
      "warnings": "array",
      "geometry": "object",
      "route": "string",
-     "width": "integer"
+     "width": "integer",
+     "severity": "integer",
+     "type": "integer",
+     "country": "string",
+     "startTime": "integer",
+     "endTime": "integer",
+     "messages": "array"
     },
     "evidence": [
      "openapi/_original/here-destination-weather-v1-openapi.yml#GET /weather/2.0/alerts",
@@ -2288,8 +2372,14 @@
      "GET collection"
     ],
     "properties": {
-     "lat": "number",
-     "lon": "number",
+     "title": "string",
+     "description": "string",
+     "severity": "string",
+     "effective_utc": "string",
+     "effective_local": "string",
+     "expires_utc": "string",
+     "expires_local": "string",
+     "uri": "string",
      "alerts": "array"
     },
     "evidence": [
@@ -2307,8 +2397,11 @@
      "success": "boolean",
      "error": "object",
      "id": "string",
-     "loc": "object",
-     "alerts": "array"
+     "type": "string",
+     "name": "string",
+     "body": "string",
+     "timestamps": "object",
+     "areas": "array"
     },
     "evidence": [
      "openapi/_original/xweather-weather-api-openapi.yml#GET /alerts/{location}"
@@ -2484,8 +2577,9 @@
      "GET collection"
     ],
     "properties": {
-     "coord": "object",
-     "list": "array"
+     "dt": "integer",
+     "main": "object",
+     "components": "object"
     },
     "evidence": [
      "openapi/_original/openweather-openapi.yml#GET /air_pollution"
@@ -2499,8 +2593,9 @@
      "GET collection"
     ],
     "properties": {
-     "coord": "object",
-     "list": "array"
+     "dt": "integer",
+     "main": "object",
+     "components": "object"
     },
     "evidence": [
      "openapi/_original/openweathermap-air-pollution-openapi.yml#GET /air_pollution"
@@ -2586,8 +2681,11 @@
      "obsTypes": "array",
      "archiveCounts": "object",
      "geometry": "object",
-     "total": "integer",
-     "stations": "array"
+     "stationId": "string",
+     "stationName": "string",
+     "country": "string",
+     "location": "object",
+     "stationType": "string"
     },
     "evidence": [
      "openapi/_original/dtn-observation-api-openapi.json#GET /v2/observations/stations",
@@ -2618,13 +2716,6 @@
     "properties": {
      "hasMore": "boolean",
      "fuelStations": "object",
-     "total": "integer",
-     "limit": "integer",
-     "count": "integer",
-     "nextOffset": "integer",
-     "stations": "array",
-     "corridor": "array",
-     "width": "integer",
      "id": "string",
      "modified": "string",
      "timeZone": "string",
@@ -2639,7 +2730,11 @@
      "access": null,
      "prices": "array",
      "stationDetails": "object",
-     "notices": "array"
+     "lat": "number",
+     "lng": "number",
+     "elv": "number",
+     "notices": "array",
+     "stations": "array"
     },
     "evidence": [
      "openapi/_original/here-fuel-prices-v2-openapi.yml#GET /fuel/stations",
@@ -2744,8 +2839,6 @@
      "GET item"
     ],
     "properties": {
-     "count": "integer",
-     "stations": "array",
      "id": "string",
      "name": "string",
      "lat": "number",
@@ -3327,6 +3420,7 @@
     "tomorrow-io",
     "weather-gov",
     "wunderground",
+    "xweather",
     "yr-no"
    ],
    "snake_case": [

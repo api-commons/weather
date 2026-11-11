@@ -5,6 +5,48 @@
   "description": "The common weather_alert in Weather, distilled from 7 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
+    "event": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.714,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "type",
+        "event",
+        "headline",
+        "title"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.571,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "severity",
+        "urgency"
+      ]
+    },
+    "condition": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.429,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "ends_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.429,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "expires",
+        "endTime"
+      ],
+      "format": "date-time"
+    },
     "geometry": {
       "type": "object",
       "x-commons-tier": "extended",
@@ -22,6 +64,18 @@
       "x-commons-spellings": [
         "id"
       ]
+    },
+    "starts_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.429,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "effective",
+        "onset",
+        "startTime"
+      ],
+      "format": "date-time"
     },
     "status": {
       "type": "string",

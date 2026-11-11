@@ -28,8 +28,11 @@ concepts:
   weather_alert:
     path_segment:
     - alerts
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      event: title
+      severity: severity
+      condition: description
+    core_coverage: 1.0
     evidence:
     - openapi/_original/weatherbit-current-weather-openapi-original.yml#GET /alerts
   air_quality:

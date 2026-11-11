@@ -15,6 +15,7 @@ concepts:
     - history
     properties:
       time: date
+      type: type
     core_coverage: 1.0
     evidence:
     - openapi/_original/climateai-weather-openapi.yml#GET /v1/history

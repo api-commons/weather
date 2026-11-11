@@ -14,10 +14,10 @@ generated. Every number below is a count of providers.
 | --- | ---: | ---: | --- | --- |
 | current_conditions | 12 | 11 |  | current 10, now 1, current-conditions 1, latest 1 |
 | forecast | 14 | 12 |  | forecast 11, hourly 5, daily 4, forecasts 2 |
-| historical_weather | 9 | 7 | time 57% | history 7, historical 2, observations 1, timemachine 1 |
-| weather_alert | 9 | 7 |  | alerts 8, alert 1 |
-| air_quality | 11 | 10 |  | air-quality 4, airquality 4, pollen 1, air_quality 1 |
-| station | 9 | 8 | name 75%, id 50% | stations 8, station 2 |
+| historical_weather | 9 | 7 | time 71% | history 7, historical 2, observations 1, timemachine 1 |
+| weather_alert | 9 | 7 | event 71%, severity 57% | alerts 8, alert 1 |
+| air_quality | 11 | 10 | time 50% | air-quality 4, airquality 4, pollen 1, air_quality 1 |
+| station | 9 | 8 | name 88%, id 62% | stations 8, station 2 |
 
 Cohort: 54 providers with harvested OpenAPI, 27 crosswalks. Of the providers exposing a current_conditions: 8% create, 92% list, 8% fetch, 0% update, 0% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
@@ -28,7 +28,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 ## What the measurement shows
 
 - Weather agrees on less than any other data context. Current conditions come closest -- a condition, a temperature and a time, each at 36-45% -- and forecasts agree on nothing: every provider nests readings in time-series arrays (daily, hourly, list, timelines) wrapped in its own location metadata.
-- Counted per listing, alerts looked standardised: four National Weather Service listings return the Common Alerting Protocol. Counted once, alerts agree only on id, status and geometry at 43%.
+- Counted per listing, alerts looked standardised: four National Weather Service listings return the Common Alerting Protocol. Counted once, alerts still agree on the event and its severity -- the two fields every warning needs -- and little else.
 - The physical quantities are shared even where the shapes are not: temperature, humidity, wind and pressure collapse to one name each through the aliases, so the vocabulary is usable as a dictionary even though no resource reaches core.
 
 ## Artifacts

@@ -16,7 +16,7 @@ concepts:
     - timelines
     - forecast
     properties:
-      units: units
+      time: startTime
     core_coverage: 0.0
     evidence:
     - openapi/_original/tomorrow-io-weather-api-openapi.yml#GET /timelines

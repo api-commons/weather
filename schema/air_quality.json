@@ -7,12 +7,13 @@
   "properties": {
     "time": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.4,
-      "x-commons-providers": 4,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 5,
       "x-commons-spellings": [
         "date",
-        "time"
+        "time",
+        "dt"
       ]
     }
   },

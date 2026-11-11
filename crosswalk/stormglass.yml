@@ -8,6 +8,7 @@ concepts:
     - stations
     properties:
       name: name
+      longitude: lng
     core_coverage: 0.5
     evidence:
     - openapi/_original/stormglass-openapi.yml#GET /tide/stations

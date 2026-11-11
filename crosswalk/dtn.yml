@@ -16,8 +16,7 @@ concepts:
     - forecasts
     - hourly
     - daily
-    properties:
-      units: units
+    properties: {}
     core_coverage: 0.0
     evidence:
     - openapi/_original/dtn-radarscope-radar-products-openapi.json#GET /feeds/v3/tropical_cyclone/forecasts
@@ -38,8 +37,10 @@ concepts:
     path_segment:
     - stations
     properties:
+      name: stationName
+      id: stationId
       elevation: elevation
-    core_coverage: 0.0
+    core_coverage: 1.0
     evidence:
     - openapi/_original/dtn-observation-api-openapi.json#GET /v2/observations/stations
     - openapi/_original/dtn-weather-conditions-openapi.yml#GET /stations

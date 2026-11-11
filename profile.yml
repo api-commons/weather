@@ -187,6 +187,15 @@ concepts:
       share: 0.071
       tier: long-tail
     properties:
+    - name: time
+      tier: extended
+      providers: 4
+      share: 0.333
+      type: string
+      spellings:
+      - startTime
+      - dt
+      - timestamp
     - name: current
       tier: extended
       providers: 3
@@ -194,55 +203,48 @@ concepts:
       type: object
       spellings:
       - current
-    - name: units
-      tier: extended
-      providers: 3
-      share: 0.25
-      type: string
-      spellings:
-      - units
-    long_tail_count: 639
+    long_tail_count: 675
     long_tail_sample:
     - alerts
+    - condition
     - daily
+    - detailed_forecast
     - elevation
     - end_time
-    - generated_at
     - geometry
     - hourly
-    - time
+    - humidity
+    - name
+    - precipitation
+    - temperature
+    - units
+    - wind_direction
+    - wind_speed
     - air_temp
-    - city
+    - air_temperature_in_celsius
+    - avg_temp_c
+    - avg_temp_f
     - city_name
-    - cnt
-    - cod
+    - cloud_cover
+    - components
     - context
-    - coord
     - country_code
     - created_at
     - current_units
     - daily_units
-    - detailed_forecast
+    - date_time_iso
+    - deg
     - diffuse_horizontal_irradiance
     - direct_normal_irradiance
+    - dt_txt
     - error
+    - feels_like
     - fields
     - forecast_generator
+    - generated_at
     - generationtime_ms
     - granularity
-    - hourly_units
-    - id
-    - init_time
-    - intervals
-    - is_daytime
-    - kind
-    - list
-    - minutely
-    - minutely_15
-    - minutely_15_units
-    - name
-    - periods
-    - precip_probability_pct
+    - gust
   historical_weather:
     segments_seen:
       history: 7
@@ -263,54 +265,63 @@ concepts:
     properties:
     - name: time
       tier: core
-      providers: 4
-      share: 0.571
+      providers: 5
+      share: 0.714
       type: string
       spellings:
       - date
       - timestamp
-    long_tail_count: 53
+      - dt
+    - name: type
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - type
+      - '@type'
+    long_tail_count: 82
     long_tail_sample:
     - id
-    - type
+    - name
+    - address
+    - admin
+    - administrative_contact
     - alerts
     - attributes
     - barometric_pressure
     - base
+    - billing_contact
     - cloud_layers
+    - components
     - condition
     - context
-    - coord
+    - create_date
     - created_at
     - current
     - dates
     - dewpoint
+    - dns_type
+    - domain_name
+    - domain_registered
+    - domain_registrar
+    - domain_status
     - elevation
+    - expire
+    - expiry_date
     - feels_like
     - forecast
     - geometry
     - granularity
-    - historical_dns_records
+    - host
     - humidity
     - kind
-    - list
+    - main
     - max_temperature_last24_hours
     - min_temperature_last24_hours
-    - name
-    - precip_hours
-    - precipitation
-    - precipitation_last3_hours
-    - precipitation_last6_hours
-    - precipitation_last_hour
-    - present_weather
-    - pressure
-    - properties
-    - rates
-    - raw_message
-    - station
-    - station_name
-    - status
-    - temp_max_c
+    - minimum
+    - name_servers
+    - num
   weather_alert:
     segments_seen:
       alerts: 8
@@ -331,6 +342,39 @@ concepts:
       share: 0.222
       tier: long-tail
     properties:
+    - name: event
+      tier: core
+      providers: 5
+      share: 0.714
+      type: string
+      spellings:
+      - type
+      - event
+      - headline
+      - title
+    - name: severity
+      tier: core
+      providers: 4
+      share: 0.571
+      type: string
+      spellings:
+      - severity
+      - urgency
+    - name: condition
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - description
+    - name: ends_at
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - expires
+      - endTime
     - name: geometry
       tier: extended
       providers: 3
@@ -345,6 +389,15 @@ concepts:
       type: string
       spellings:
       - id
+    - name: starts_at
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - effective
+      - onset
+      - startTime
     - name: status
       tier: extended
       providers: 3
@@ -352,16 +405,14 @@ concepts:
       type: string
       spellings:
       - status
-    long_tail_count: 39
+    long_tail_count: 43
     long_tail_sample:
+    - area
     - category
     - certainty
     - code
-    - condition
     - created_at
     - ends
-    - ends_at
-    - event
     - instruction
     - message_type
     - note
@@ -370,29 +421,32 @@ concepts:
     - scope
     - sender
     - sender_name
-    - severity
-    - starts_at
     - updated_at
     - addresses
-    - area
     - area_description
+    - body
     - context
+    - country
+    - effective_local
+    - effective_utc
     - error
     - event_code
+    - expires_local
+    - expires_utc
     - geocode
     - identifier
     - info
     - language
-    - loc
+    - messages
     - msg_type
+    - name
     - pagination
     - parameters
     - properties
     - restriction
     - route
     - source
-    - web
-    - width
+    - timestamps
   air_quality:
     segments_seen:
       air-quality: 4
@@ -413,13 +467,14 @@ concepts:
       tier: long-tail
     properties:
     - name: time
-      tier: extended
-      providers: 4
-      share: 0.4
+      tier: core
+      providers: 5
+      share: 0.5
       type: string
       spellings:
       - date
       - time
+      - dt
     long_tail_count: 47
     long_tail_sample:
     - current
@@ -433,7 +488,7 @@ concepts:
     - category_color
     - city_name
     - co_surface
-    - coord
+    - components
     - country_code
     - current_units
     - day_of_week
@@ -449,7 +504,7 @@ concepts:
     - hazard_statement
     - hourly
     - hourly_units
-    - list
+    - main
     - no2
     - no2_surface
     - no_surface
@@ -492,18 +547,20 @@ concepts:
     properties:
     - name: name
       tier: core
-      providers: 6
-      share: 0.75
+      providers: 7
+      share: 0.875
       type: string
       spellings:
       - name
+      - stationName
     - name: id
       tier: core
-      providers: 4
-      share: 0.5
+      providers: 5
+      share: 0.625
       type: string
       spellings:
       - id
+      - stationId
       - '@id'
     - name: elevation
       tier: extended
@@ -513,11 +570,18 @@ concepts:
       spellings:
       - elevation
       - altitude
-    long_tail_count: 54
+    - name: longitude
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: number
+      spellings:
+      - lng
+    long_tail_count: 51
     long_tail_sample:
+    - country
     - distance
     - geometry
-    - longitude
     - notices
     - time_zone
     - updated_at
@@ -532,12 +596,11 @@ concepts:
     - city
     - contacts
     - context
-    - corridor
-    - country
     - county
     - created_at
     - current
     - disclaimers
+    - elv
     - external_id
     - fire_weather_zone
     - forecast
@@ -546,12 +609,13 @@ concepts:
     - history
     - is_archived
     - last_obs_timestamp
-    - limit
     - model
-    - next_offset
     - obs_types
     - open24x7
     - parameters
     - portscode
     - position
     - prices
+    - products
+    - properties
+    - provider

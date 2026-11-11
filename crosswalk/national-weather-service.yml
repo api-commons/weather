@@ -30,8 +30,7 @@ concepts:
     path_segment:
     - forecast
     - hourly
-    properties:
-      units: units
+    properties: {}
     core_coverage: 0.0
     evidence:
     - openapi/_original/national-weather-service-openapi.json#GET /gridpoints/{wfo}/{x},{y}/forecast
@@ -44,6 +43,9 @@ concepts:
     - observations
     properties:
       time: timestamp
+      type:
+      - type
+      - '@type'
     core_coverage: 1.0
     evidence:
     - openapi/_original/national-weather-service-openapi.json#GET /stations/{stationId}/observations
@@ -55,10 +57,23 @@ concepts:
     path_segment:
     - alerts
     properties:
+      event:
+      - type
+      - event
+      - headline
+      - title
+      severity:
+      - severity
+      - urgency
+      condition: description
+      ends_at: expires
       geometry: geometry
       id: id
+      starts_at:
+      - effective
+      - onset
       status: status
-    core_coverage: 0.0
+    core_coverage: 1.0
     evidence:
     - openapi/_original/national-weather-service-openapi.json#GET /alerts
     - openapi/_original/national-weather-service-openapi.json#GET /alerts/{id}

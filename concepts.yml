@@ -78,8 +78,8 @@ findings:
     every provider nests readings in time-series arrays (daily, hourly, list, timelines)
     wrapped in its own location metadata."
   - "Counted per listing, alerts looked standardised: four National Weather Service listings
-    return the Common Alerting Protocol. Counted once, alerts agree only on id, status and
-    geometry at 43%."
+    return the Common Alerting Protocol. Counted once, alerts still agree on the event and
+    its severity -- the two fields every warning needs -- and little else."
   - "The physical quantities are shared even where the shapes are not: temperature, humidity,
     wind and pressure collapse to one name each through the aliases, so the vocabulary is
     usable as a dictionary even though no resource reaches core."

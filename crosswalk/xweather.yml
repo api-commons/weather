@@ -6,7 +6,8 @@ concepts:
   forecast:
     path_segment:
     - forecasts
-    properties: {}
+    properties:
+      time: timestamp
     core_coverage: 0.0
     evidence:
     - openapi/_original/xweather-weather-api-openapi.yml#GET /forecasts/{location}
@@ -14,8 +15,9 @@ concepts:
     path_segment:
     - alerts
     properties:
+      event: type
       id: id
-    core_coverage: 0.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/xweather-weather-api-openapi.yml#GET /alerts/{location}
   air_quality:
